@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Nunito:ital,wght@0,300;1,300;1,400&display=swap');
+
+/* font-family: 'Lato', sans-serif; */
+/* font-family: 'Nunito', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: ghostwhite;
+    font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    margin: 30px 0 30px 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 4em;
+}
+
+header p {
+    font-size: 1.3em;
+    padding: 0 3%;
+}
+
+.game-area {
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+#question-box {
+    margin: auto;
+    margin-top: 35px;
+    padding-top: 35px;
+    height: 70px;
+    /* text-align: center; */
+}
+
+.btn {
+    float: inline-start;
+    width: 220px;
+    height: 60px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.btn--c {
+    /* clear: both; */
+    /* float: left; */
+    display:inline-block;
+}
+
+.submit-btn {
+    display: block;
+    margin-top: 70px;
+    top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 80px auto;
+}

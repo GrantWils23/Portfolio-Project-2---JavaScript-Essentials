@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/cs/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,13 +21,33 @@
 <body>
     <!-- HEADER -->
     <header>
-        <h1>Quiz Game <i class="fab fa-fort-awesome"></i></a></h1>
+        <h1>Quiz Game <i class="fas fa-question"></i></a></h1>
+        <p>Welcome to the quiz zone... Here you will have 10 questions to answer and you will have four possible answers, only one will be correct. Choose your answer carefully 
+            and submit the answer. Onec you have answered all your questions you will get your score.
+        </p>
     </header>
     <!-- GAME AREA -->
     <div class="game-area"> 
-
+        <div id="question-box">Q) What is...........?</div>
+        <button data-type="button-a" class="btn btn--a">A.</button>
+        <button data-type="button-b" class="btn btn--b">B.</button>
+        <button data-type="button-c" class="btn btn--c">C.</button>
+        <button data-type="button-d" class="btn btn--d">D.</button>
+        <!-- Submit Button-->
+        <button data-type="submit" class="submit-btn">Submit Answer:</button>
+    </div>
+    <!-- Score area-->
+    <div class="score-area">
+        <p class="scores">Correct Answers <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
     <!-- FOOTER -->
-    <footer></footer>
+    <footer>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/57a5431661.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
