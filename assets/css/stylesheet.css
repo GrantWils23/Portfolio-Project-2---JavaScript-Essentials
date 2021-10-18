@@ -13,7 +13,7 @@ body {
     background: ghostwhite;
     font-family: "Nunito", sans-serif;
 }
-
+/* TITLE */
 h1 {
     margin: 30px 0 30px 0;
     font-family: 'Lato', sans-serif;
@@ -21,47 +21,118 @@ h1 {
     font-size: 4em;
 }
 
-header p {
+/* Instructions style */
+header button {
+    width: fit-content;
     font-size: 1.3em;
     padding: 0 3%;
+    border: darkgray solid 3px;
+    background-color: darkgray;
 }
 
+.modal {
+    display: none; /* hide display by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.hidden-instructions {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 1.5em;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+/* MAIN BODY GAME AREA */
 .game-area {
     width: 70%;
     height: 500px;
     margin: auto;
     text-align: center;
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
+    background-image: radial-gradient( green, yellowgreen, yellow);
+    border-radius: 35px;
+    border-style: double;
+    border-width: 10px;
+    border-color: darkseagreen;
 }
 
 #question-box {
     margin: auto;
     margin-top: 35px;
-    padding-top: 35px;
+    padding-top: 70px;
     height: 70px;
+    font-size: 1.5em;
     /* text-align: center; */
 }
 
 .btn {
     float: inline-start;
-    width: 220px;
+    width: 30%;
     height: 60px;
     font-family: inherit;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    margin: 5px 10px;
+    font-size: 1.4em;
 }
 
-.btn--c {
-    /* clear: both; */
-    /* float: left; */
-    display:inline-block;
+.btm--top {
+    display: block;
 }
 
+.btn--btm {
+    display: block;
+}
+/* Submit Answer Button */ 
 .submit-btn {
     display: block;
-    margin-top: 70px;
     top: 30px;
     padding: 10px 20px;
     text-align: center;
-    margin: 80px auto;
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.3em;
+    /* font-weight: 700; */
+}
+
+/* Question Counter */
+.question-counter {
+    margin: 35px 35px 35px 35px; 
+    padding-bottom: 70px;
+    font-size: 1.4em;
+}
+
+/* SCORE AREA */
+.score-area {
+    content:none;
 }

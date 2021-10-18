@@ -22,19 +22,31 @@
     <!-- HEADER -->
     <header>
         <h1>Quiz Game <i class="fas fa-question"></i></a></h1>
-        <p>Welcome to the quiz zone... Here you will have 10 questions to answer and you will have four possible answers, only one will be correct. Choose your answer carefully 
-            and submit the answer. Onec you have answered all your questions you will get your score.
-        </p>
+        <button id="gameInstructions">Game Instructions</button>
+
+        <div id="gameHelp" class="modal">
+            <div class="hidden-instructions">
+                <span class="close">&times;</span>
+                <p>Welcome to the quiz zone... Here you will have 10 questions to answer and you will have four possible answers, only one will be correct. Choose your answer carefully 
+                    and submit the answer. Once you have answered all your questions you will get your score.</p>
+            </div>
+        </div>
     </header>
     <!-- GAME AREA -->
     <div class="game-area"> 
         <div id="question-box">Q) What is...........?</div>
-        <button data-type="button-a" class="btn btn--a">A.</button>
-        <button data-type="button-b" class="btn btn--b">B.</button>
-        <button data-type="button-c" class="btn btn--c">C.</button>
-        <button data-type="button-d" class="btn btn--d">D.</button>
-        <!-- Submit Button-->
+        <div class="btn--top">
+            <button data-type="button-a" class="btn btn--a">A.</button>
+            <button data-type="button-b" class="btn btn--b">B.</button>
+        </div>
+        <div class="btn--btm">
+            <button data-type="button-c" class="btn btn--c">C.</button>
+            <button data-type="button-d" class="btn btn--d">D.</button>
+        </div>
+        <!--Submit Button-->
         <button data-type="submit" class="submit-btn">Submit Answer:</button>
+        <!--Question number-->
+        <div class="question-counter"><p><span id="question-number">1</span>/<span>10</span></p></div>
     </div>
     <!-- Score area-->
     <div class="score-area">
@@ -47,6 +59,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/57a5431661.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
 
 </body>
 
