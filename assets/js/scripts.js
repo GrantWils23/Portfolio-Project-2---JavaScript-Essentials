@@ -302,3 +302,36 @@ var quizQuestions = [
     correctAnswer: "c",
   },
 ]
+
+
+
+// START GAME //
+function startGame() {
+
+}
+
+
+// DISPLAY QUESTION //
+function displayQuestion() {
+
+}
+
+
+
+// DISPLAY ANSWERS //
+function displayAnswers() {
+
+}
+
+
+
+// CHECK ANSWERS t& TO NEXT QUESTION//
+function submitAnswer() {
+
+}
+
+
+// KEEP TRACK OF QUESTION NUMBER //
+function questionTracker() {
+  
+}
