@@ -10,8 +10,10 @@
 }
 
 body {
-    background: ghostwhite;
+    background-image: linear-gradient( white, green);
     font-family: "Nunito", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* TITLE */
 h1 {
@@ -26,8 +28,11 @@ header button {
     width: fit-content;
     font-size: 1.3em;
     padding: 0 3%;
-    border: darkgray solid 3px;
-    background-color: darkgray;
+    background-color: lightgreen;
+    border-radius: 35px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: darkolivegreen;
 }
 
 .modal {
@@ -98,12 +103,17 @@ header button {
 .btn {
     float: inline-start;
     width: 30%;
-    height: 60px;
+    height: 70px;
     font-family: inherit;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     margin: 5px 10px;
     font-size: 1.4em;
+    background-color: darkseagreen;
+    border-radius: 35px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: darkolivegreen;
 }
 
 .btm--top {
@@ -122,17 +132,26 @@ header button {
     margin: auto;
     margin-top: 70px;
     font-size: 1.3em;
+    background-color: lightgreen;
+    border-radius: 35px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: darkolivegreen;
     /* font-weight: 700; */
 }
 
 /* Question Counter */
 .question-counter {
-    margin: 35px 35px 35px 35px; 
-    padding-bottom: 70px;
+    margin: 10px 35px 35px 35px; 
+    padding-bottom: 35px;
     font-size: 1.4em;
 }
 
 /* SCORE AREA */
 .score-area {
-    content:none;
+    display:none;
+}
+
+.dead-space {
+    height: 300px;
 }
