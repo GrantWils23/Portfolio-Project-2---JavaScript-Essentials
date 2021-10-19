@@ -34,25 +34,24 @@
     </header>
     <!-- GAME AREA -->
     <div class="game-area"> 
-        <div id="question-box">Q) What is........... ?</div>
-        <div class="btn--top">
-            <button data-type="button-a" class="btn btn--a">A.</button>
-            <button data-type="button-b" class="btn btn--b">B.</button>
+        <div id="question">Q) What is........... ?</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button data-type="button-a" class="btn">A.</button>
+            <button data-type="button-b" class="btn">B.</button>
+            <button data-type="button-c" class="btn">C.</button>
+            <button data-type="button-d" class="btn">D.</button>
+            <!--Submit Button-->
+            <button data-type="submit" class="submit-btn">Submit Answer:</button>
+            <!--Question number-->
+            <div class="question-counter"><p><span id="question-number">1</span>/<span>10</span></p></div>
         </div>
-        <div class="btn--btm">
-            <button data-type="button-c" class="btn btn--c">C.</button>
-            <button data-type="button-d" class="btn btn--d">D.</button>
-        </div>
-        <!--Submit Button-->
-        <button data-type="submit" class="submit-btn">Submit Answer:</button>
-        <!--Question number-->
-        <div class="question-counter"><p><span id="question-number">1</span>/<span>10</span></p></div>
+ 
     </div>
     <!-- Score area-->
-    <div class="score-area">
+    <!-- <div class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
+    </div> -->
     <!-- FOOTER -->
     <footer class="dead-space">
 
