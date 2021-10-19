@@ -84,7 +84,6 @@ header button {
 
 
 
-
 /* MAIN BODY GAME AREA */
 .game-area {
     width: 80%;
@@ -146,6 +145,16 @@ header button {
     /* font-weight: 700; */
 }
 
+.start-game {
+    display: flex;
+    justify-content: center;
+    margin: 250px auto;
+    font-size: 4em;
+    font-weight: 700;
+    border-width: 5px;
+    border-color: black;
+}
+
 /* Question Counter */
 .question-counter {
     margin: 10px 0 35px 0; 
@@ -156,4 +165,8 @@ header button {
 
 .dead-space {
     height: 300px;
+}
+
+.hide {
+    display: none;
 }
