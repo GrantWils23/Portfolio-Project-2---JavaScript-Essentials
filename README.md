@@ -1,5 +1,8 @@
 <h1>Portfolio_Project_2 --- JavaScript_Essentials</h1>
 <br><br>
+<a href="https://grantwils23.github.io/Portfolio-Project-2---JavaScript-Essentials/">CLICK HERE TO GO TO THE SITE</a>
+
+<br><br>
 ![image goes here](assets/images/filename.jpg)
 <br><br>
 <h1>The Quiz Game! / Rock, Paper, Scissors Game</h1>

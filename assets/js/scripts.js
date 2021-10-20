@@ -329,40 +329,7 @@ function startGame() {
 }
 
 
-// let randomQuestions = [];
-// for ( let i = 0; i < 10; i++) {
-//   let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
-//   let randomQuestion = quizQuestions[randomQuestionNumber]; 
-//   randomQuestions.push(randomQuestion);
-// };
-// console.log(randomQuestions);
 
-// let randomQuestions2 = [];
-// let i = 0;
-// while ( i < 10 ) {
-//   let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
-//   let randomQuestion2 = quizQuestions.splice(randomQuestionNumber, 1); 
-//   console.log(randomQuestion2)
-//   randomQuestions2.push(randomQuestion2.values);
-//   i++;
-// };
-// console.log(randomQuestions2);
-// console.log(quizQuestions);
-
-
-
-
-let randomQuestions = [];
-let i = 0;
-while ( i < 10 ) {
-  let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
-  let randomQuestion = quizQuestions.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
-  let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
-  randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
-  i++;
-};
-console.log(randomQuestions); 
-console.log(quizQuestions);
 
 // DISPLAY QUESTION //
 function displayQuestion() {
