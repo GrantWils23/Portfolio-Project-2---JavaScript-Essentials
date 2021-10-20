@@ -132,7 +132,7 @@ var quizQuestions = [
     correctAnswer: "b",
   },
   {
-    question: "what would you use a deburrer for?",
+    question: "What would you use a deburrer for?",
     answers: {
       a: "To smooths edges and sides of manufactured parts",
       b: "To open canned products",
@@ -182,7 +182,7 @@ var quizQuestions = [
     correctAnswer: "b",
   },
   {
-    question: "how many litres are in a gallon?",
+    question: "How many litres are in a gallon?",
     answers: {
       a: "3.90",
       b: "5.12",
@@ -212,7 +212,7 @@ var quizQuestions = [
     correctAnswer: "c",
   },
   {
-    question: "how many legs does a ladybug have?",
+    question: "How many legs does a ladybug have?",
     answers: {
       a: "4",
       b: "8",
@@ -305,11 +305,64 @@ var quizQuestions = [
 
 
 
+const startButton = document.getElementById("start-game");
+startButton.addEventListener("click", startGame)
+
+
+
 // START GAME //
 function startGame() {
+  console.log("started")
+  startButton.classList.add("hide");
+  document.getElementById("question").classList.remove("hide");
+  document.getElementById("answer-buttons").classList.remove("hide");
 
+  let randomQuestions = [];
+  let i = 0;
+  while ( i < 10 ) {
+    let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
+    let randomQuestion = quizQuestions.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
+    let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
+    randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
+    i++;
+  };
 }
 
+
+// let randomQuestions = [];
+// for ( let i = 0; i < 10; i++) {
+//   let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
+//   let randomQuestion = quizQuestions[randomQuestionNumber]; 
+//   randomQuestions.push(randomQuestion);
+// };
+// console.log(randomQuestions);
+
+// let randomQuestions2 = [];
+// let i = 0;
+// while ( i < 10 ) {
+//   let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
+//   let randomQuestion2 = quizQuestions.splice(randomQuestionNumber, 1); 
+//   console.log(randomQuestion2)
+//   randomQuestions2.push(randomQuestion2.values);
+//   i++;
+// };
+// console.log(randomQuestions2);
+// console.log(quizQuestions);
+
+
+
+
+let randomQuestions = [];
+let i = 0;
+while ( i < 10 ) {
+  let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
+  let randomQuestion = quizQuestions.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
+  let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
+  randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
+  i++;
+};
+console.log(randomQuestions); 
+console.log(quizQuestions);
 
 // DISPLAY QUESTION //
 function displayQuestion() {
@@ -333,5 +386,5 @@ function submitAnswer() {
 
 // KEEP TRACK OF QUESTION NUMBER //
 function questionTracker() {
-  
+
 }
