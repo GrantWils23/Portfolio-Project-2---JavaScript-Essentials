@@ -1,5 +1,6 @@
 
 
+
 // GAME INSTRUCTIONS HELP MODAL // 
 
 // Get the modal
@@ -82,7 +83,7 @@ var quizQuestions = [
     correctAnswer: "c",
   },
   {
-    question: "From which country would you find the following items from? Kielbasa, Pierogi, Barszcz, Wodka",
+    question: "From which country would you find the following items from? Kielbasa, Pierogi, Barszcz, Wodka?",
     answers: {
       a: "Tialand",
       b: "Russia",
@@ -192,7 +193,7 @@ var quizQuestions = [
     correctAnswer: "c",
   },
   {
-    question: "Which English Football Team went a whole season unbeaten in the Premier League",
+    question: "Which English Football Team went a whole season unbeaten in the Premier League?",
     answers: {
       a: "Arsenal",
       b: "Manchester United",
@@ -222,7 +223,7 @@ var quizQuestions = [
     correctAnswer: "d",
   },
   {
-    question: "Where can you find a timpani",
+    question: "Where can you find a timpani?",
     answers: {
       a: "Inside a car engine",
       b: "In an orchestra",
@@ -242,7 +243,7 @@ var quizQuestions = [
     correctAnswer: "a",
   },
   {
-    question: "Who Played James Bond in 'You Only Live Twice",
+    question: "Who Played James Bond in 'You Only Live Twice'?",
     answers: {
       a: "Roger Moore",
       b: "Sean Connery",
@@ -262,7 +263,7 @@ var quizQuestions = [
     correctAnswer: "c",
   },
   {
-    question: "When did the UK fully ban the use of Asbestos",
+    question: "When did the UK fully ban the use of Asbestos?",
     answers: {
       a: "1970",
       b: "1980",
@@ -292,7 +293,7 @@ var quizQuestions = [
     correctAnswer: "b",
   },
   {
-    question: "Who was supposed to play the T-1000 in 'Terminator 2; Judgement Day' before Robert Patrick took up the role.",
+    question: "Who was supposed to play the T-1000 in 'Terminator 2; Judgement Day' before Robert Patrick took up the role?",
     answers: {
       a: "Bill Murray",
       b: "Carl Weathers",
@@ -310,6 +311,10 @@ startButton.addEventListener("click", startGame)
 
 
 
+let mutableList = quizQuestions;
+let randomQuestions = [];
+let currentQuestionNumberIndex = 1;
+
 // START GAME //
 function startGame() {
   console.log("started")
@@ -317,37 +322,63 @@ function startGame() {
   document.getElementById("question").classList.remove("hide");
   document.getElementById("answer-buttons").classList.remove("hide");
 
-  let randomQuestions = [];
   let i = 0;
   while ( i < 10 ) {
-    let randomQuestionNumber = Math.floor(Math.random() * quizQuestions.length); // Random Question number drawn from the arrays length
-    let randomQuestion = quizQuestions.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
+    let randomQuestionNumber = Math.floor(Math.random() * mutableList.length); // Random Question number drawn from the arrays length
+    let randomQuestion = mutableList.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
     let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
     randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
     i++;
   };
-}
+  console.log(randomQuestions)
+  displayQuestion();
 
+}
 
 
 
 // DISPLAY QUESTION //
 function displayQuestion() {
+    
+  let question = randomQuestions.pop(); // get first question from the random question list
 
+  let theQ = document.getElementById("question");
+  theQ.innerHTML = question.question;
+
+  let btnA = document.getElementById("btnA");
+  btnA.innerHTML = question.answers.a;
+  
+  let btnB = document.getElementById("btnB");
+  btnB.innerHTML = question.answers.b;
+
+  let btnC = document.getElementById("btnC");
+  btnC.innerHTML = question.answers.c;
+
+  let btnD = document.getElementById("btnD");
+  btnD.innerHTML = question.answers.d;
+
+  let questionNumber = document.getElementById("question-number");
+  questionNumber.innerHTML = currentQuestionNumberIndex;
 }
 
 
-
-// DISPLAY ANSWERS //
-function displayAnswers() {
-
-}
-
-
-
-// CHECK ANSWERS t& TO NEXT QUESTION//
+// SUBMIT ANSWER & TO NEXT QUESTION//
 function submitAnswer() {
+  let buttons = document.getElementsByTagName("button");
+  for (let button of buttons) {
+    button.addEventListener("click", function() {
+      if (this.getAttribute("data-type") === "submit") {
+        checkAnswer();
+     } 
+    })
+  }
 
+  currentQuestionNumberIndex++;
+}
+
+//CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE;
+function checkAnswer() {
+  
 }
 
 
