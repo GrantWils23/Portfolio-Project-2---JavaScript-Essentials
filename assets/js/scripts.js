@@ -263,7 +263,7 @@ var quizQuestions = [
       {a: "0", correct: false},
       {b: "2", correct: true},
       {c: "1", correct: false},
-      {d: "3", correct: false},
+      {d: "3", correct: false}
     ]
   },
   {
@@ -313,21 +313,22 @@ function startGame() {
 function displayQuestion() {
     
   let question = randomQuestions.pop(); // get first question from the random question list
+  // console.log(question.answers[0].a)
 
   let theQ = document.getElementById("question");
   theQ.innerHTML = question.question;
 
   let btnA = document.getElementById("btnA");
-  btnA.innerHTML = question.answers.a;
+  btnA.innerHTML = question.answers[0].a;
   
   let btnB = document.getElementById("btnB");
-  btnB.innerHTML = question.answers.b;
+  btnB.innerHTML = question.answers[1].b;
 
   let btnC = document.getElementById("btnC");
-  btnC.innerHTML = question.answers.c;
+  btnC.innerHTML = question.answers[2].c;
 
   let btnD = document.getElementById("btnD");
-  btnD.innerHTML = question.answers.d;
+  btnD.innerHTML = question.answers[3].d;
 
   let questionNumber = document.getElementById("question-number");
   questionNumber.innerHTML = currentQuestionNumberIndex;
