@@ -40,7 +40,11 @@ header button {
     border-color: darkolivegreen;
     text-align: center;
     margin: 10px auto;
+    cursor:pointer;
+}
 
+header button:hover {
+    outline: 2px solid darkolivegreen;
 }
 
 .modal {
@@ -120,6 +124,11 @@ header button {
     border-color: darkolivegreen;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-width: 4px;
 }
 
 .btm-grid {
@@ -143,16 +152,26 @@ header button {
     border-width: 2px;
     border-color: darkolivegreen;
     /* font-weight: 700; */
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    outline: 2px solid darkolivegreen;
 }
 
 .start-game {
     display: flex;
     justify-content: center;
     margin: 250px auto;
-    font-size: 4em;
+    font-size: 3.9em;
     font-weight: 700;
-    border-width: 5px;
+    border-width: 4px;
     border-color: black;
+    cursor: pointer;
+}
+
+.start-game:hover {
+    outline: 2px solid black;
 }
 
 /* Question Counter */
