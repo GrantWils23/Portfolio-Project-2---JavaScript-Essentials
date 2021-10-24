@@ -307,7 +307,7 @@ var quizQuestions = [
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
 
-let selectedAnswer = null;
+var selectedValue = null;
 let mutableList = quizQuestions;
 let randomQuestions = [];
 let currentQuestionNumberIndex = 1;
@@ -362,32 +362,33 @@ function displayQuestion(question) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // CLICK AND TOGGLE THE ANSWER BUTTONS
-function answerHighlighted(event) {
-  selectedValue = null
+function answerSelected(event) {
+  selectedValue = null;
   selectedValue = this.innerHTML;
-  
-console.log(selectedValue)
+  console.log(selectedValue);
+  return selectedValue;
 }
-//   let selectedValue = document.getElementsById("btn").innerText;
-//   for (selectedValue in selectedValues) 
-//   {let selectedValue = sele
-//   if (selectedValue.value === false) {
-//     selectedValue.value = true;
-//     selectedValue.style.backgroundColor = "teal";
-//   } else if (selectedValue.value === true) {
-//     selectedValue.value = false;
-//     se.style.backgroundColor = "darkseagreen";
-//   }
 
-//   if (this.value === false) {
-//     this.value = true;
-//     this.style.backgroundColor = "teal";
-//   } else if (this.value === true) {
-//     this.value = false;
-//     this.style.backgroundColor = "darkseagreen";
-//   }
-// }
+function answerHighlighted(event) {
+ this.style.backgroundColor = "teal";
+}
 
+function resetBackgroundColor() {
+  let buttons = document.getElementsByClassName("btn");
+  for (let i = 0; i < buttons.length; i++) {
+  button = buttons[i].style.backgroundColor = "darkseagreen";
+  }
+}
+
+let buttons = document.getElementsByClassName("btn");
+for (let i = 0; i < buttons.length; i++) {
+  let button = buttons[i].addEventListener("click", answerSelected);
+  button = buttons[i].addEventListener("click", resetBackgroundColor);
+  button = buttons[i].addEventListener("click", answerHighlighted);
+};
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // SUBMIT ANSWER & TO NEXT QUESTION//
 // function submitAnswer(event) {
@@ -424,8 +425,3 @@ function answerBoxSelected(event) {
 
 
 
-
-let buttons = document.getElementsByClassName("btn");
-for (let i = 0; i < buttons.length; i++) {
-  let button = buttons[i].addEventListener("click", answerHighlighted);
-};
