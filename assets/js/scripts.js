@@ -40,7 +40,7 @@ var quizQuestions = [
       {answer: "Budapest", correct: false},
       {answer: "Berlin", correct: true}
     ],
-    selectedValue: false,
+    correctAnswer: "Berlin",
   },
   {
     question: "What town do the Simspons live in?",
@@ -50,7 +50,7 @@ var quizQuestions = [
       {answer: "New York", correct:false},
       {answer: "Atlantas", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Springfield",
   },
   {
     question: "What is Superman's weakness?",
@@ -60,7 +60,7 @@ var quizQuestions = [
       {answer: "Working at the Daily Planet", correct: false},
       {answer: "Samsonite", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Kryptonite",
   },
   {
     question: "What does LED stand for?",
@@ -70,7 +70,7 @@ var quizQuestions = [
       {answer: "Light Energy Detected", correct: false},
       {answer: "Light Emitting Disc", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Light Emitting Diode",
   },
   {
     question: "Who helped co-write the lyrics to the hit song from Dire Straits 'Money for Nothing'?",
@@ -80,7 +80,7 @@ var quizQuestions = [
       {answer: "Sting", correct: true},
       {answer: "Elton John", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Sting",
   },
   {
     question: "From which country would you find the following items from? Kielbasa, Pierogi, Barszcz, Wodka?",
@@ -90,7 +90,7 @@ var quizQuestions = [
       {answer: "Hungary", correct: false},
       {answer: "Poland", correct: true}
     ],
-    selectedValue: false,
+    correctAnswer: "Poland",
   },
   {
     question: "How many neighbours does Russia Share their borders with? ",
@@ -100,7 +100,7 @@ var quizQuestions = [
       {answer: "16", correct: false},
       {answer: "18", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "14",
   },
   {
     question: "How old was Wolfgang Amadeus Mozart when he died?",
@@ -110,7 +110,7 @@ var quizQuestions = [
       {answer: "65", correct: false},
       {answer: "75", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "35",
   },
   {
     question: "What is the smallest Country in the World?",
@@ -120,7 +120,7 @@ var quizQuestions = [
       {answer: "Atlanta City", correct: false},
       {answer: "Vatican City", correct: true}
     ],
-    selectedValue: false,
+    correctAnswer: "Vatican City",
   },
   {
     question: "What is the speed of light?",
@@ -130,17 +130,17 @@ var quizQuestions = [
       {answer: "148000 miles per second", correct: false},
       {answer: "198000 miles per second", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "186000 miles per second",
   },
   {
     question: "What would you use a deburrer for?",
     answers: [
-      {answer: "To smooths edges and sides of manufactured parts", correct: true},
+      {answer: "To smooth edges and sides of manufactured parts", correct: true},
       {answer: "To open canned products", correct: false},
       {answer: "To test humidity in the air", correct: false},
       {answer: "To dig a hole in the ground", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "To smooth edges and sides of manufactured parts",
   },
   {
     question: "Which snake is not a poisonous?",
@@ -150,7 +150,7 @@ var quizQuestions = [
       {answer: "Boa Constrictor", correct: false},
       {answer: "Cobra", correct: true}
     ],
-    selectedValue: false,
+    correctAnswer: "Cobra",
   },
   {
     question: "Which snake is poisonous?",
@@ -160,7 +160,7 @@ var quizQuestions = [
       {answer: "Green Anaconda", correct: false},
       {answer: "Coin Snake", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Indian Krait",
   },
   {
     question: "What is the tallest mountain on Earth?",
@@ -170,17 +170,17 @@ var quizQuestions = [
       {answer: "K2", correct: false},
       {answer: "Cho Oyu", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Mount Everest",
   },
   {
     question: "What did Lamborghini make before it made Super Cars?",
     answers: [
-      {answer: "Windows", correct: false},
+      {answer: "Lorries", correct: false},
       {answer: "Tractors", correct: true},
       {answer: "Furniture", correct: false},
       {answer: "Motorbikes", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Tractors",
   },
   {
     question: "How many litres are in a gallon?",
@@ -190,7 +190,7 @@ var quizQuestions = [
       {answer: "4.55", correct: true},
       {answer: "4.23", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "4.55",
   },
   {
     question: "Which English Football Team went a whole season unbeaten in the Premier League?",
@@ -200,7 +200,7 @@ var quizQuestions = [
       {answer: "Manchester City", correct: false},
       {answer: "Chelsea", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Arsenal",
   },
   {
     question: "How many Grand Slams has Roger Federer won up till 2021?",
@@ -210,7 +210,7 @@ var quizQuestions = [
       {answer: "20", correct: true},
       {answer: "23", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "20",
   },
   {
     question: "How many legs does a ladybug have?",
@@ -220,7 +220,7 @@ var quizQuestions = [
       {answer: "10", correct: true},
       {answer: "6", correc: false}
     ],
-    selectedValue: false,
+    correctAnswer: "10",
   },
   {
     question: "Where can you find a timpani?",
@@ -229,7 +229,8 @@ var quizQuestions = [
       {answer: "In an orchestra", correct: true},
       {answer: "mixed in a bolognese sauce", correct: false},
       {answer: "Inside a jewellers tool box", correct: false}
-    ], selectedValue: false,
+    ],
+     correctAnswer: "In an orchestra",
   },
   {
     question: "How many lives does a cat have?",
@@ -239,7 +240,7 @@ var quizQuestions = [
       {answer: "Nine", correct: false},
       {answer: "Twentyfour", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "One",
   },
   {
     question: "Who Played James Bond in 'You Only Live Twice'?",
@@ -249,7 +250,7 @@ var quizQuestions = [
       {answer: "Piers Brosnan", correct: false},
       {answer: "Daniel Craig", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Sean Connery",
   },
   {
     question: "What film is the character 'Doctor Evil' well known from?",
@@ -259,7 +260,7 @@ var quizQuestions = [
       {answer: "Austin Powers", correct: true},
       {answer: "Dispicable Me", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Austin Powers",
   },
   {
     question: "When did the UK fully ban the use of Asbestos?",
@@ -268,7 +269,8 @@ var quizQuestions = [
       {answer: "1980", correct: false},
       {answer: "1990", correct: false},
       {answer: "2000", correct: true}
-    ], selectedValue: false,
+    ],
+    correctAnswer: "2000",
   },
   {
     question: "Who created the character 'Winnie the Pooh'?",
@@ -278,7 +280,7 @@ var quizQuestions = [
       {answer: "Michael Bond", correct: false},
       {answer: "Mary Tourtel", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "A.A. Mine",
   },
   {
     question: "How many times has the TV show 'Family Guy' been cancelled?",
@@ -288,7 +290,7 @@ var quizQuestions = [
       {answer: "1", correct: false},
       {answer: "3", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "2",
   },
   {
     question: "Who was supposed to play the T-1000 in 'Terminator 2; Judgement Day' before Robert Patrick took up the role?",
@@ -298,7 +300,7 @@ var quizQuestions = [
       {answer: "Billy Idol", correct: true},
       {answer: "Jean Claude Van Damme", correct: false}
     ],
-    selectedValue: false,
+    correctAnswer: "Billy Idol",
   },
 ]
 
@@ -337,7 +339,7 @@ function startGame() {
 
 };
 
-
+/////////////////////////////////////////////////////////////////////////////////////
 
 // DISPLAY QUESTION //
 function displayQuestion(question) {
@@ -390,19 +392,25 @@ for (let i = 0; i < buttons.length; i++) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// SUBMIT ANSWER & TO NEXT QUESTION//
-// function submitAnswer(event) {
-//   let buttons = document.getElementsByTagName("button");
-//   for (let button of buttons) {
-//     button.addEventListener("click", function() {
-//       if (this.getAttribute("data-type") === "submit") {
-//         checkAnswer();
-//      } 
-//     })
-//   }
+function checkAnswer(question) {
+  if (selectedValue === question.correctAnswer) {
 
-//   currentQuestionNumberIndex++;
-// };
+  }
+}
+
+// SUBMIT ANSWER & TO NEXT QUESTION//
+function submitAnswer(event) {
+  let buttons = document.getElementsByTagName("button");
+  for (let button of buttons) {
+    button.addEventListener("click", function() {
+      if (this.getAttribute("data-type") === "submit") {
+        checkAnswer();
+     } 
+    })
+  }
+
+  currentQuestionNumberIndex++;
+};
 
 // ANSWER BOX SELECTED
 function answerBoxSelected(event) {
