@@ -412,29 +412,39 @@ function checkAnswer(event) {
   }
 };
 
+let correctAnswerScore = 0;
+let incorrectAnswerScore = 0;
 // SCORE COUNTER 
 function CountScore() {
+  if (selectedValue === question.correctAnswer) {
+    correctAnswerScore += 1;
+  } else if (selectedValue !== question.correctAnswer) {
+    incorrectAnswerScore += 1;
+  }
+}
+
+// KEEP TRACK OF QUESTION NUMBER //
+function questionTracker() {
+  currentQuestionNumberIndex +=1;
+}
+
+
+// SUBMIT ANSWER & TO NEXT QUESTION//
+function nextQuestionButton() {
   
 }
 
-// SUBMIT ANSWER & TO NEXT QUESTION//
-// function submitAnswer() {
-//   checkAnswer()
-//   currentQuestionNumberIndex++;
-// }
 
 
 let submitAnsBtn = document.getElementsByClassName("submit-btn");
 let submitAnswer = submitAnsBtn[0].addEventListener("click", checkAnswer);
+submitAnswer = submitAnsBtn[0].addEventListener("click", CountScore);
 // submitAnsBtn[0].addEventListener("click", submitAnswer);
 
 
 // CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE;
 
 
-
-// KEEP TRACK OF QUESTION NUMBER //
-// function questionTracker() {}
 
 
 
