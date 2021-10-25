@@ -280,7 +280,7 @@ var quizQuestions = [
       {answer: "Michael Bond", correct: false},
       {answer: "Mary Tourtel", correct: false}
     ],
-    correctAnswer: "A.A. Mine",
+    correctAnswer: "A.A. Milne",
   },
   {
     question: "How many times has the TV show 'Family Guy' been cancelled?",
@@ -308,7 +308,7 @@ var quizQuestions = [
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
 
-var selectedValue = null;
+var selectedValue;
 let mutableList = quizQuestions;
 let randomQuestions = [];
 var currentQuestionNumberIndex = 1;
@@ -369,7 +369,6 @@ function answerSelected(event) {
   selectedValue = null;
   selectedValue = this.innerHTML;
   console.log(selectedValue);
-  return selectedValue;
 }
 
 function answerHighlighted(event) {
@@ -412,6 +411,8 @@ function checkAnswer(event) {
   }
 };
 
+////////////////////////////////////////////////////////////////////////////////////////////
+
 let correctAnswerScore = 0;
 let incorrectAnswerScore = 0;
 // SCORE COUNTER 
@@ -429,17 +430,30 @@ function questionTracker() {
 }
 
 
-// SUBMIT ANSWER & TO NEXT QUESTION//
-function nextQuestionButton() {
-  
+
+let submitAnsBtn = document.getElementById("submit-btn");
+let nextQuestBtn = document.getElementById("next-btn");
+
+// SUBMIT ANSWER & NEXT QUESTION BUTTON //
+function nextQuestionButtonDisplay() {
+  document.getElementById("next-btn").classList.remove("hide");
+  document.getElementById("submit-btn").classList.add("hide");
 }
 
+submitAnsBtn.addEventListener("click", checkAnswer);
+submitAnsBtn.addEventListener("click", CountScore);
+submitAnsBtn.addEventListener("click", nextQuestionButtonDisplay);
 
+// DISPLAY NEXT QUESTION //
+function displayNextQuestion() {
+  document.getElementById("next-btn").classList.add("hide");
+  document.getElementById("submit-btn").classList.remove("hide");
+  question = randomQuestions.pop();
+  displayQuestion(question);
+}
 
-let submitAnsBtn = document.getElementsByClassName("submit-btn");
-let submitAnswer = submitAnsBtn[0].addEventListener("click", checkAnswer);
-submitAnswer = submitAnsBtn[0].addEventListener("click", CountScore);
-// submitAnsBtn[0].addEventListener("click", submitAnswer);
+nextQuestBtn.addEventListener("click", displayNextQuestion);
+nextQuestBtn.addEventListener("click", resetBackgroundColor);
 
 
 // CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE;
