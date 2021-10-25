@@ -305,15 +305,14 @@ var quizQuestions = [
 ]
 
 
-
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
 
 var selectedValue = null;
 let mutableList = quizQuestions;
 let randomQuestions = [];
-let currentQuestionNumberIndex = 1;
-
+var currentQuestionNumberIndex = 1;
+var question;
 
 
 // START GAME //
@@ -327,13 +326,15 @@ function startGame() {
   while ( i < 10 ) {
     let randomQuestionNumber = Math.floor(Math.random() * mutableList.length); // Random Question number drawn from the arrays length
     let randomQuestion = mutableList.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
+    // console.log(randomQuestion)
     let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
+    // console.log(striptedQuestion)
     randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
     i++;
   };
-  console.log(randomQuestions);
+  // console.log(randomQuestions);
 
-  let question = randomQuestions.pop(); // get first question from the random question list
+  question = randomQuestions.pop(); // get first question from the random question list
   // console.log(question.answers[0].a)
   displayQuestion(question);
 
@@ -378,53 +379,58 @@ function answerHighlighted(event) {
 function resetBackgroundColor() {
   let buttons = document.getElementsByClassName("btn");
   for (let i = 0; i < buttons.length; i++) {
-  button = buttons[i].style.backgroundColor = "darkseagreen";
+  buttons[i].style.backgroundColor = "darkseagreen";
   }
 }
 
 let buttons = document.getElementsByClassName("btn");
 for (let i = 0; i < buttons.length; i++) {
-  let button = buttons[i].addEventListener("click", answerSelected);
-  button = buttons[i].addEventListener("click", resetBackgroundColor);
+  let button = buttons[i].addEventListener("click", resetBackgroundColor);
   button = buttons[i].addEventListener("click", answerHighlighted);
+  button = buttons[i].addEventListener("click", answerSelected);
 };
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function checkAnswer(question) {
+function checkAnswer(event) {
+  let buttons = document.getElementsByClassName("btn");
   if (selectedValue === question.correctAnswer) {
-
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].textContent === selectedValue) {
+        buttons[i].style.backgroundColor = "green";
+      }
+    }
+  } else if (selectedValue !== question.correctAnswer) {
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].textContent === selectedValue) {
+        buttons[i].style.backgroundColor = "red";
+      } else if (buttons[i].textContent === question.correctAnswer) {
+        buttons[i].style.backgroundColor = "green";
+      }
+    }
   }
+};
+
+// SCORE COUNTER 
+function CountScore() {
+  
 }
 
 // SUBMIT ANSWER & TO NEXT QUESTION//
-function submitAnswer(event) {
-  let buttons = document.getElementsByTagName("button");
-  for (let button of buttons) {
-    button.addEventListener("click", function() {
-      if (this.getAttribute("data-type") === "submit") {
-        checkAnswer();
-     } 
-    })
-  }
+// function submitAnswer() {
+//   checkAnswer()
+//   currentQuestionNumberIndex++;
+// }
 
-  currentQuestionNumberIndex++;
-};
 
-// ANSWER BOX SELECTED
-function answerBoxSelected(event) {
+let submitAnsBtn = document.getElementsByClassName("submit-btn");
+let submitAnswer = submitAnsBtn[0].addEventListener("click", checkAnswer);
+// submitAnsBtn[0].addEventListener("click", submitAnswer);
 
-} 
 
 // CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE;
-// function checkAnswer(event) {
-//   let button
-//   if (this.data-type === question.correctAnswer) {
 
-//   }
-
-// }
 
 
 // KEEP TRACK OF QUESTION NUMBER //
