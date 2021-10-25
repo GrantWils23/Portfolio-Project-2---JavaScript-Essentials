@@ -311,7 +311,6 @@ startButton.addEventListener("click", startGame);
 var selectedValue;
 let mutableList = quizQuestions;
 let randomQuestions = [];
-var currentQuestionNumberIndex = 1;
 var question;
 
 
@@ -340,13 +339,19 @@ function startGame() {
 
 };
 
+// KEEP TRACK OF QUESTION NUMBER //
+
+var currentQuestionNumberIndex = 1;
+
+function questionTracker() {
+  currentQuestionNumberIndex +=1;
+}
+
 /////////////////////////////////////////////////////////////////////////////////////
 
 // DISPLAY QUESTION //
 function displayQuestion(question) {
-    
-
-    let theQ = document.getElementById("question"); // display question
+  let theQ = document.getElementById("question"); // display question
   theQ.innerHTML = question.question;
  
   let questionNumber = document.getElementById("question-number"); // display question number
@@ -415,8 +420,9 @@ function checkAnswer(event) {
 
 let correctAnswerScore = 0;
 let incorrectAnswerScore = 0;
+
 // SCORE COUNTER 
-function CountScore() {
+function countScore() {
   if (selectedValue === question.correctAnswer) {
     correctAnswerScore += 1;
   } else if (selectedValue !== question.correctAnswer) {
@@ -424,12 +430,7 @@ function CountScore() {
   }
 }
 
-// KEEP TRACK OF QUESTION NUMBER //
-function questionTracker() {
-  currentQuestionNumberIndex +=1;
-}
-
-
+////////////////////////////////////////////////////////////////////////////////////////////
 
 let submitAnsBtn = document.getElementById("submit-btn");
 let nextQuestBtn = document.getElementById("next-btn");
@@ -440,9 +441,40 @@ function nextQuestionButtonDisplay() {
   document.getElementById("submit-btn").classList.add("hide");
 }
 
-submitAnsBtn.addEventListener("click", checkAnswer);
-submitAnsBtn.addEventListener("click", CountScore);
-submitAnsBtn.addEventListener("click", nextQuestionButtonDisplay);
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// works but doesnt let you pick an incorrect answer
+// function SubmitAnswer() {
+//   if (selectedValue == null) {
+//     // submitAnsBtn.disabled = true;
+//     return alert("Please select an answer")
+//   } else if (selectedValue === question.correctAnswer) {
+//     // submitAnsBtn.disabled = false;
+//     checkAnswer();
+//     countScore();
+//     nextQuestionButtonDisplay();
+//     selectedValue = null;
+//   }
+// }
+
+function SubmitAnswer() {
+  if (selectedValue == null) {
+    // submitAnsBtn.disabled = true;
+    return alert("Please select an answer")
+  } else if (selectedValue != null) {
+    checkAnswer();
+    countScore();
+    nextQuestionButtonDisplay();
+    selectedValue = null;
+    questionTracker();
+  }
+}
+
+
+// submitAnsBtn.addEventListener("click", nextQuestionButtonDisplay);
+// submitAnsBtn.addEventListener("click", checkAnswer);
+// submitAnsBtn.addEventListener("click", countScore);
+submitAnsBtn.addEventListener("click", SubmitAnswer);
 
 // DISPLAY NEXT QUESTION //
 function displayNextQuestion() {
