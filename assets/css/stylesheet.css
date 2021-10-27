@@ -208,9 +208,42 @@ header button:hover {
 }
 
 .dead-space {
-    height: 300px;
+    height: 400px;
 }
 
 .hide {
     display: none;
+}
+
+#result-box {
+    font-size: 1.4em;
+    margin: 70px 40px 70px 40px;
+    background-color: rgb(107, 179, 189, 0.7);
+    padding: 30px;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: rgb(71, 112, 112);
+    border-width: 3px;
+
+}
+
+#person-message {
+    margin-top: 30px;
+}
+
+#start-new-game-btn {
+    display: grid;
+    top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 1.3em;
+    background-color: lightgreen;
+    border-radius: 35px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: darkolivegreen;
+    cursor: pointer;
+ /* edit */
 }

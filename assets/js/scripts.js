@@ -217,10 +217,10 @@ var quizQuestions = [
     answers: [
       {answer: "4", correct: false},
       {answer: "8", correct: false},
-      {answer: "10", correct: true},
-      {answer: "6", correc: false}
+      {answer: "10", correct: false},
+      {answer: "6", correc: true}
     ],
-    correctAnswer: "10",
+    correctAnswer: "6",
   },
   {
     question: "Where can you find a timpani?",
@@ -313,6 +313,12 @@ let mutableList = quizQuestions;
 let randomQuestions = [];
 var question;
 
+var currentQuestionNumberIndex = 1;
+
+let correctAnswerScore = 0;
+let incorrectAnswerScore = 0;
+
+
 
 // START GAME //
 function startGame() {
@@ -339,10 +345,9 @@ function startGame() {
 
 };
 
+///////////////////////////////////////////////////////////////////////////////////////
+
 // KEEP TRACK OF QUESTION NUMBER //
-
-var currentQuestionNumberIndex = 1;
-
 function questionTracker() {
   currentQuestionNumberIndex +=1;
 }
@@ -418,9 +423,6 @@ function checkAnswer(event) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-let correctAnswerScore = 0;
-let incorrectAnswerScore = 0;
-
 // SCORE COUNTER 
 function countScore() {
   if (selectedValue === question.correctAnswer) {
@@ -443,20 +445,7 @@ function nextQuestionButtonDisplay() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-// works but doesnt let you pick an incorrect answer
-// function SubmitAnswer() {
-//   if (selectedValue == null) {
-//     // submitAnsBtn.disabled = true;
-//     return alert("Please select an answer")
-//   } else if (selectedValue === question.correctAnswer) {
-//     // submitAnsBtn.disabled = false;
-//     checkAnswer();
-//     countScore();
-//     nextQuestionButtonDisplay();
-//     selectedValue = null;
-//   }
-// }
-
+// SUBMIT ANSWER - WITH BOOLEAN LOGIC PREVENTING BUG OF NO SELECT VALUE PASSING TRUE //
 function SubmitAnswer() {
   if (selectedValue == null) {
     // submitAnsBtn.disabled = true;
@@ -471,9 +460,33 @@ function SubmitAnswer() {
 }
 
 
-// submitAnsBtn.addEventListener("click", nextQuestionButtonDisplay);
-// submitAnsBtn.addEventListener("click", checkAnswer);
-// submitAnsBtn.addEventListener("click", countScore);
+// CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE; //
+function returnResults() {
+  let totalScore = correctAnswerScore + incorrectAnswerScore;
+  if (totalScore === 10) {
+    document.getElementById("question").classList.add("hide");
+    document.getElementById("answer-buttons").classList.add("hide");
+    document.getElementById("next-btn").classList.add("hide");
+    document.getElementById("submit-btn").classList.add("hide"); // up to here to clear and hide elements in the box
+    document.getElementById("result-box").classList.remove("hide");
+  }
+
+ let userScore = document.getElementById("user-score");
+ userScore.innerHTML = correctAnswerScore; // Display user score
+ let personalMessage = document.getElementById("personal-message"); // code to display message based on score performance
+  if (correctAnswerScore < 3) {
+    personalMessage.innerHTML = "Unlucky there, better luck next time!";
+  } else if (correctAnswerScore < 6) {
+    personalMessage.innerHTML = "Well done, you know some random stuff!";
+  } else if (correctAnswerScore < 9) {
+    personalMessage.innerHTML = "Wow someone is showing off there skills!";
+  } else if (correctAnswerScore == 10) {
+    personalMessage.innerHTML = "Wow 100%! We are in the presence of a genius. Congratulations";
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
 submitAnsBtn.addEventListener("click", SubmitAnswer);
 
 // DISPLAY NEXT QUESTION //
@@ -486,10 +499,23 @@ function displayNextQuestion() {
 
 nextQuestBtn.addEventListener("click", displayNextQuestion);
 nextQuestBtn.addEventListener("click", resetBackgroundColor);
+nextQuestBtn.addEventListener("click", returnResults);
 
+  // RESET VALUES //
+  function resetGameValues() {
+    currentQuestionNumberIndex = 1;
+    correctAnswerScore = 0;
+    incorrectAnswerScore = 0;
+    document.getElementById("submit-btn").classList.remove("hide"); // up to here to clear and hide elements in the box
+    document.getElementById("result-box").classList.add("hide");
 
-// CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE;
+  }
 
+// START NEW GAME //
+ let startNewGameBtn = document.getElementById("start-new-game-btn");
+
+startNewGameBtn.addEventListener("click", resetGameValues);
+startNewGameBtn.addEventListener("click", startGame);
 
 
 
