@@ -474,7 +474,7 @@ function returnResults(event) {
   } else if (correctAnswerScore < 9) {
     personalMessage.innerHTML = "Wow someone is showing off there skills!";
   } else if (correctAnswerScore == 10) {
-    personalMessage.innerHTML = "Wow 100%! We are in the presence of a genius. Congratulations";
+    personalMessage.innerHTML = "Wow 100%! We are in the presence of a genius. Congratulations!";
   }
 }
 
