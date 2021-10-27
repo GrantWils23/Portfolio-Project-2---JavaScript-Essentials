@@ -327,23 +327,7 @@ function startGame(event) {
   currentQuestionIndexNumber = 0;
   document.getElementById("answer-buttons").classList.remove("hide");
   setNextQuestion()
-
-  // let i = 0;
-  // while ( i < 10 ) {
-  //   let randomQuestionNumber = Math.floor(Math.random() * mutableList.length); // Random Question number drawn from the arrays length
-  //   let randomQuestion = mutableList.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
-  //   // console.log(randomQuestion)
-  //   let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
-  //   // console.log(striptedQuestion)
-  //   randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
-  //   i++;
-  // };
-  // // console.log(randomQuestions);
-
-  // question = randomQuestions.pop(); // get first question from the random question list
-  // console.log(question.answers[0].a)
   displayQuestion(question);
-  setNextQuestion()
 
 };
 
