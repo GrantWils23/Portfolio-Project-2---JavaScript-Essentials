@@ -308,48 +308,57 @@ var quizQuestions = [
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
 
-var selectedValue;
-let mutableList = quizQuestions;
-let randomQuestions = [];
-var question;
-
-var currentQuestionNumberIndex = 1;
+// var selectedValue;
+// let mutableList = quizQuestions;
+// let randomQuestions = [];
+// var question;
 
 let correctAnswerScore = 0;
 let incorrectAnswerScore = 0;
 
-
+let shuffledQuestions, currentQuestionIndexNumber;
 
 // START GAME //
-function startGame() {
+function startGame(event) {
   console.log("started")
   startButton.classList.add("hide");
   document.getElementById("question").classList.remove("hide");
+  shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
+  currentQuestionIndexNumber = 0;
   document.getElementById("answer-buttons").classList.remove("hide");
+  setNextQuestion()
 
-  let i = 0;
-  while ( i < 10 ) {
-    let randomQuestionNumber = Math.floor(Math.random() * mutableList.length); // Random Question number drawn from the arrays length
-    let randomQuestion = mutableList.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
-    // console.log(randomQuestion)
-    let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
-    // console.log(striptedQuestion)
-    randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
-    i++;
-  };
-  // console.log(randomQuestions);
+  // let i = 0;
+  // while ( i < 10 ) {
+  //   let randomQuestionNumber = Math.floor(Math.random() * mutableList.length); // Random Question number drawn from the arrays length
+  //   let randomQuestion = mutableList.splice(randomQuestionNumber, 1);  //Random Question drawn from the list of Questions and added into new array
+  //   // console.log(randomQuestion)
+  //   let striptedQuestion = randomQuestion[0]; // returns a stripped question outside of an array
+  //   // console.log(striptedQuestion)
+  //   randomQuestions.push(striptedQuestion); // push the stripped uestion into the list of 10 questions for the game;
+  //   i++;
+  // };
+  // // console.log(randomQuestions);
 
-  question = randomQuestions.pop(); // get first question from the random question list
+  // question = randomQuestions.pop(); // get first question from the random question list
   // console.log(question.answers[0].a)
   displayQuestion(question);
+  setNextQuestion()
 
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
+function setNextQuestion() {
+  displayNextQuestion(shuffledQuestions[currentQuestionIndexNumber])
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
 // KEEP TRACK OF QUESTION NUMBER //
-function questionTracker() {
-  currentQuestionNumberIndex +=1;
+function questionTracker(event) {
+  currentQuestionIndexNumber +=1;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -357,19 +366,19 @@ function questionTracker() {
 // DISPLAY QUESTION //
 function displayQuestion(question) {
   let theQ = document.getElementById("question"); // display question
-  theQ.innerHTML = question.question;
+  theQ.innerHTML = shuffledQuestions[currentQuestionIndexNumber].question;
  
   let questionNumber = document.getElementById("question-number"); // display question number
-  questionNumber.innerHTML = currentQuestionNumberIndex;
+  questionNumber.innerHTML = currentQuestionIndexNumber + 1;
 
   let a = document.getElementsByClassName("btn")[0]; // display answers in button fields
-  a.innerHTML = question.answers[0].answer;
+  a.textContent = shuffledQuestions[currentQuestionIndexNumber].answers[0].answer;
   let b = document.getElementsByClassName("btn")[1];
-  b.innerHTML = question.answers[1].answer;
+  b.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[1].answer;
   let c = document.getElementsByClassName("btn")[2];
-  c.innerHTML = question.answers[2].answer;
+  c.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[2].answer;
   let d = document.getElementsByClassName("btn")[3];
-  d.innerHTML = question.answers[3].answer;
+  d.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[3].answer;
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -385,7 +394,7 @@ function answerHighlighted(event) {
  this.style.backgroundColor = "teal";
 }
 
-function resetBackgroundColor() {
+function resetBackgroundColor(event) {
   let buttons = document.getElementsByClassName("btn");
   for (let i = 0; i < buttons.length; i++) {
   buttons[i].style.backgroundColor = "darkseagreen";
@@ -404,7 +413,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 function checkAnswer(event) {
   let buttons = document.getElementsByClassName("btn");
-  if (selectedValue === question.correctAnswer) {
+  if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i].textContent === selectedValue) {
         buttons[i].style.backgroundColor = "green";
@@ -414,7 +423,7 @@ function checkAnswer(event) {
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i].textContent === selectedValue) {
         buttons[i].style.backgroundColor = "red";
-      } else if (buttons[i].textContent === question.correctAnswer) {
+      } else if (buttons[i].textContent === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
         buttons[i].style.backgroundColor = "green";
       }
     }
@@ -424,10 +433,10 @@ function checkAnswer(event) {
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // SCORE COUNTER 
-function countScore() {
-  if (selectedValue === question.correctAnswer) {
+function countScore(event) {
+  if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     correctAnswerScore += 1;
-  } else if (selectedValue !== question.correctAnswer) {
+  } else if (selectedValue !== shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     incorrectAnswerScore += 1;
   }
 }
@@ -438,7 +447,7 @@ let submitAnsBtn = document.getElementById("submit-btn");
 let nextQuestBtn = document.getElementById("next-btn");
 
 // SUBMIT ANSWER & NEXT QUESTION BUTTON //
-function nextQuestionButtonDisplay() {
+function nextQuestionButtonDisplay(event) {
   document.getElementById("next-btn").classList.remove("hide");
   document.getElementById("submit-btn").classList.add("hide");
 }
@@ -446,7 +455,7 @@ function nextQuestionButtonDisplay() {
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // SUBMIT ANSWER - WITH BOOLEAN LOGIC PREVENTING BUG OF NO SELECT VALUE PASSING TRUE //
-function SubmitAnswer() {
+function SubmitAnswer(event) {
   if (selectedValue == null) {
     // submitAnsBtn.disabled = true;
     return alert("Please select an answer")
@@ -461,7 +470,7 @@ function SubmitAnswer() {
 
 
 // CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE; //
-function returnResults() {
+function returnResults(event) {
   let totalScore = correctAnswerScore + incorrectAnswerScore;
   if (totalScore === 10) {
     document.getElementById("question").classList.add("hide");
@@ -490,11 +499,11 @@ function returnResults() {
 submitAnsBtn.addEventListener("click", SubmitAnswer);
 
 // DISPLAY NEXT QUESTION //
-function displayNextQuestion() {
+function displayNextQuestion(event) {
   document.getElementById("next-btn").classList.add("hide");
   document.getElementById("submit-btn").classList.remove("hide");
-  question = randomQuestions.pop();
-  displayQuestion(question);
+  // question = randomQuestions.pop();
+  displayQuestion(question)
 }
 
 nextQuestBtn.addEventListener("click", displayNextQuestion);
@@ -502,7 +511,7 @@ nextQuestBtn.addEventListener("click", resetBackgroundColor);
 nextQuestBtn.addEventListener("click", returnResults);
 
   // RESET VALUES //
-  function resetGameValues() {
+  function resetGameValues(event) {
     currentQuestionNumberIndex = 1;
     correctAnswerScore = 0;
     incorrectAnswerScore = 0;
