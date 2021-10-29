@@ -213,6 +213,7 @@ header button:hover {
     display: none;
 }
 
+/* RESULT BOX */
 #result-box {
     font-size: 1.4em;
     font-weight: 900;
@@ -247,12 +248,74 @@ header button:hover {
  /* edit */
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Change screen size from larger to Medium size devices from 1363px down" */
-@media screen and (max-width: 1308px) {
+@media screen and (max-width: 580px) {
+    header button {
+        font-size: 1.1em;
+    }
+
+    #question {
+        margin: 20px 5px 20px 5px;
+        font-size: 1.3em;
+    }
+    
+    .btn {
+        overflow: auto;
+        letter-spacing: 1.2px;
+        width: 65%;
+        font-size: 1.2em;
+        
+
+    }
+
+    #start-new-game-btn {
+        top: 30px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
+
+    .next-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+
+    .submit-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+    
+    .start-game {
+        margin: 200px auto;
+        font-size: 2.0em;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    .question-counter {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    #result-box {
+        font-size: 1.2em;
+    }
+    
+    #person-message {
+        margin-top: 30px;
+    }
+    
+    #start-new-game-btn {
+        font-size: 1.2em;
+    }
 }
 
 /* Change screen size from larger to Medium size devices from 360px down" */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
     header button {
         font-size: 1.1em;
     }
@@ -318,12 +381,6 @@ header button:hover {
         padding: 10px 20px;
         font-size: 1.1em;
     }
-    
-    .start-game {
-        margin: 200px auto;
-        font-size: 2.0em;
-        font-weight: 700;
-    }
 
     .question-counter {
         font-size: 1.0em;
@@ -381,7 +438,10 @@ header button:hover {
     
     .start-game {
         margin: 200px auto;
-        font-size: 2.0em;
+        margin-left: 5px;
+        margin-right:  5px;
+        padding: 10px 10px;
+        font-size: 1.6em;
         font-weight: 700;
         width: 85%;;
     }
