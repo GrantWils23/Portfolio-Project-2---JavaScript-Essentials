@@ -1,6 +1,5 @@
 
 
-
 // GAME INSTRUCTIONS HELP MODAL // 
 
 // Get the modal
@@ -304,6 +303,10 @@ var quizQuestions = [
   },
 ]
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
@@ -509,8 +512,3 @@ nextQuestBtn.addEventListener("click", returnResults);
 
 startNewGameBtn.addEventListener("click", resetGameValues);
 startNewGameBtn.addEventListener("click", startGame);
-
-
-
-
-
