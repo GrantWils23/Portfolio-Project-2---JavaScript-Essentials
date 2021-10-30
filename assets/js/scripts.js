@@ -34,272 +34,352 @@ var quizQuestions = [
   {
     question: "What is the Capital of Germany?",
     answers: [
-      {answer: "Paris", correct: false},
-      {answer: "Amsterdam", correct: false},
-      {answer: "Budapest", correct: false},
-      {answer: "Berlin", correct: true}
+      {answer: "Paris"},
+      {answer: "Amsterdam"},
+      {answer: "Budapest"},
+      {answer: "Berlin"}
     ],
     correctAnswer: "Berlin",
   },
   {
     question: "What town do the Simspons live in?",
     answers: [
-      {answer: "Springfield", correct: true},
-      {answer: "Quahog", correct: false},
-      {answer: "New York", correct:false},
-      {answer: "Atlantas", correct: false}
+      {answer: "Springfield"},
+      {answer: "Quahog"},
+      {answer: "New York"},
+      {answer: "Atlantas"}
     ],
     correctAnswer: "Springfield",
   },
   {
     question: "What is Superman's weakness?",
     answers: [
-      {answer: "Sausages", correct: false},
-      {answer: "Kryptonite", correct: true},
-      {answer: "Working at the Daily Planet", correct: false},
-      {answer: "Samsonite", correct: false}
+      {answer: "Sausages"},
+      {answer: "Kryptonite"},
+      {answer: "Working at the Daily Planet"},
+      {answer: "Samsonite"}
     ],
     correctAnswer: "Kryptonite",
   },
   {
     question: "What does LED stand for?",
     answers: [
-      {answer: "Light Emitting Diode", correct: true},
-      {answer: "Light Emitting Danger", correct: false},
-      {answer: "Light Energy Detected", correct: false},
-      {answer: "Light Emitting Disc", correct: false}
+      {answer: "Light Emitting Diode"},
+      {answer: "Light Emitting Danger"},
+      {answer: "Light Energy Detected"},
+      {answer: "Light Emitting Disc"}
     ],
     correctAnswer: "Light Emitting Diode",
   },
   {
     question: "Who helped co-write the lyrics to the hit song from Dire Straits 'Money for Nothing'?",
     answers: [
-      {answer: "Neil Diamond", correct: false},
-      {answer: "Bernie Taupe", correct: false},
-      {answer: "Sting", correct: true},
-      {answer: "Elton John", correct: false}
+      {answer: "Neil Diamond"},
+      {answer: "Bernie Taupe"},
+      {answer: "Sting"},
+      {answer: "Elton John"}
     ],
     correctAnswer: "Sting",
   },
   {
     question: "From which country would you find the following items from? Kielbasa, Pierogi, Barszcz, Wodka?",
     answers: [
-      {answer: "Tialand",correct: false},
-      {answer: "Russia", correct: false},
-      {answer: "Hungary", correct: false},
-      {answer: "Poland", correct: true}
+      {answer: "Tialand"},
+      {answer: "Russia"},
+      {answer: "Hungary"},
+      {answer: "Poland"}
     ],
     correctAnswer: "Poland",
   },
   {
     question: "How many neighbours does Russia Share their borders with? ",
     answers: [
-      {answer: "12", correct: false},
-      {answer: "14", correct: true},
-      {answer: "16", correct: false},
-      {answer: "18", correct: false}
+      {answer: "12"},
+      {answer: "14"},
+      {answer: "16"},
+      {answer: "18"}
     ],
     correctAnswer: "14",
   },
   {
     question: "How old was Wolfgang Amadeus Mozart when he died?",
     answers: [
-      {answer: "35", correct: true},
-      {answer: "45", correct: false},
-      {answer: "65", correct: false},
-      {answer: "75", correct: false}
+      {answer: "35"},
+      {answer: "45"},
+      {answer: "65"},
+      {answer: "75"}
     ],
     correctAnswer: "35",
   },
   {
     question: "What is the smallest Country in the World?",
     answers: [
-      {answer: "San Marino", correct: false},
-      {answer: "Monaco", correct: false},
-      {answer: "Atlanta City", correct: false},
-      {answer: "Vatican City", correct: true}
+      {answer: "San Marino"},
+      {answer: "Monaco"},
+      {answer: "Atlanta City"},
+      {answer: "Vatican City"}
     ],
     correctAnswer: "Vatican City",
   },
   {
     question: "What is the speed of light?",
     answers: [
-      {answer: "200102 miles per second", correct: false},
-      {answer: "186000 miles per second", correct: true},
-      {answer: "148000 miles per second", correct: false},
-      {answer: "198000 miles per second", correct: false}
+      {answer: "200102 miles per second"},
+      {answer: "186000 miles per second"},
+      {answer: "148000 miles per second"},
+      {answer: "198000 miles per second"}
     ],
     correctAnswer: "186000 miles per second",
   },
   {
     question: "What would you use a deburrer for?",
     answers: [
-      {answer: "To smooth edges and sides of manufactured parts", correct: true},
-      {answer: "To open canned products", correct: false},
-      {answer: "To test humidity in the air", correct: false},
-      {answer: "To dig a hole in the ground", correct: false}
+      {answer: "Smooth edges and sides of manufactured parts"},
+      {answer: "To open canned products"},
+      {answer: "To test humidity in the air"},
+      {answer: "To dig a hole in the ground"}
     ],
-    correctAnswer: "To smooth edges and sides of manufactured parts",
+    correctAnswer: "Smooth edges and sides of manufactured parts",
   },
   {
     question: "Which snake is not a poisonous?",
     answers: [
-      {answer: "Black Mamba", correct: false},
-      {answer: "Inland Taipan", correct: false},
-      {answer: "Boa Constrictor", correct: false},
-      {answer: "Cobra", correct: true}
+      {answer: "Black Mamba"},
+      {answer: "Inland Taipan"},
+      {answer: "Boa Constrictor"},
+      {answer: "Cobra"}
     ],
     correctAnswer: "Cobra",
   },
   {
     question: "Which snake is poisonous?",
     answers: [
-      {answer: "Indian Krait", correct: true},
-      {answer: "Burmese Python", correct: false},
-      {answer: "Green Anaconda", correct: false},
-      {answer: "Coin Snake", correct: false}
+      {answer: "Indian Krait"},
+      {answer: "Burmese Python"},
+      {answer: "Green Anaconda"},
+      {answer: "Coin Snake"}
     ],
     correctAnswer: "Indian Krait",
   },
   {
     question: "What is the tallest mountain on Earth?",
     answers: [
-      {answer: "Mount Everest", correct: true},
-      {answer: "Mount Rushmore", correct:false},
-      {answer: "K2", correct: false},
-      {answer: "Cho Oyu", correct: false}
+      {answer: "Mount Everest"},
+      {answer: "Mount Rushmore"},
+      {answer: "K2"},
+      {answer: "Cho Oyu"}
     ],
     correctAnswer: "Mount Everest",
   },
   {
     question: "What did Lamborghini make before it made Super Cars?",
     answers: [
-      {answer: "Lorries", correct: false},
-      {answer: "Tractors", correct: true},
-      {answer: "Furniture", correct: false},
-      {answer: "Motorbikes", correct: false}
+      {answer: "Lorries"},
+      {answer: "Tractors"},
+      {answer: "Furniture"},
+      {answer: "Motorbikes"}
     ],
     correctAnswer: "Tractors",
   },
   {
     question: "How many litres are in a gallon?",
     answers: [
-      {answer: "3.90", correct: false},
-      {answer: "5.12", correct: false},
-      {answer: "4.55", correct: true},
-      {answer: "4.23", correct: false}
+      {answer: "3.90"},
+      {answer: "5.12"},
+      {answer: "4.55"},
+      {answer: "4.23"}
     ],
     correctAnswer: "4.55",
   },
   {
     question: "Which English Football Team went a whole season unbeaten in the Premier League?",
     answers: [
-      {answer: "Arsenal", correct: true},
-      {answer: "Manchester United", correct: false},
-      {answer: "Manchester City", correct: false},
-      {answer: "Chelsea", correct: false}
+      {answer: "Arsenal"},
+      {answer: "Manchester United"},
+      {answer: "Manchester City"},
+      {answer: "Chelsea"}
     ],
     correctAnswer: "Arsenal",
   },
   {
     question: "How many Grand Slams has Roger Federer won up till 2021?",
     answers: [
-      {answer: "22", correct: false},
-      {answer: "21", correct: false},
-      {answer: "20", correct: true},
-      {answer: "23", correct: false}
+      {answer: "22"},
+      {answer: "21"},
+      {answer: "20"},
+      {answer: "23"}
     ],
     correctAnswer: "20",
   },
   {
     question: "How many legs does a ladybug have?",
     answers: [
-      {answer: "4", correct: false},
-      {answer: "8", correct: false},
-      {answer: "10", correct: false},
-      {answer: "6", correc: true}
+      {answer: "4"},
+      {answer: "8"},
+      {answer: "10"},
+      {answer: "6"}
     ],
     correctAnswer: "6",
   },
   {
     question: "Where can you find a timpani?",
     answers: [
-      {answer: "Inside a car engine", correct: false},
-      {answer: "In an orchestra", correct: true},
-      {answer: "mixed in a bolognese sauce", correct: false},
-      {answer: "Inside a jewellers tool box", correct: false}
+      {answer: "Inside a car engine"},
+      {answer: "In an orchestra"},
+      {answer: "mixed in a bolognese sauce"},
+      {answer: "Inside a jewellers tool box"}
     ],
      correctAnswer: "In an orchestra",
   },
   {
     question: "How many lives does a cat have?",
     answers: [
-      {answer: "One", correct: true},
-      {answer: "None", correct: false},
-      {answer: "Nine", correct: false},
-      {answer: "Twentyfour", correct: false}
+      {answer: "One"},
+      {answer: "None"},
+      {answer: "Nine"},
+      {answer: "Twentyfour"}
     ],
     correctAnswer: "One",
   },
   {
     question: "Who Played James Bond in 'You Only Live Twice'?",
     answers: [
-      {answer: "Roger Moore", correct: false},
-      {answer: "Sean Connery", correct: true},
-      {answer: "Piers Brosnan", correct: false},
-      {answer: "Daniel Craig", correct: false}
+      {answer: "Roger Moore"},
+      {answer: "Sean Connery"},
+      {answer: "Piers Brosnan"},
+      {answer: "Daniel Craig"}
     ],
     correctAnswer: "Sean Connery",
   },
   {
     question: "What film is the character 'Doctor Evil' well known from?",
     answers: [
-      {answer: "The Fantastic Four", correct: false},
-      {answer: "Dr No", correct: false},
-      {answer: "Austin Powers", correct: true},
-      {answer: "Dispicable Me", correct: false}
+      {answer: "The Fantastic Four"},
+      {answer: "Dr No"},
+      {answer: "Austin Powers"},
+      {answer: "Dispicable Me"}
     ],
     correctAnswer: "Austin Powers",
   },
   {
     question: "When did the UK fully ban the use of Asbestos?",
     answers: [
-      {answer: "1970", correct: false},
-      {answer: "1980", correct: false},
-      {answer: "1990", correct: false},
-      {answer: "2000", correct: true}
+      {answer: "1970"},
+      {answer: "1980"},
+      {answer: "1990"},
+      {answer: "2000"}
     ],
     correctAnswer: "2000",
   },
   {
     question: "Who created the character 'Winnie the Pooh'?",
     answers: [
-      {answer: "A.A. Milne", correct: true},
-      {answer: "Walt Disney", correct: false},
-      {answer: "Michael Bond", correct: false},
-      {answer: "Mary Tourtel", correct: false}
+      {answer: "A.A. Milne"},
+      {answer: "Walt Disney"},
+      {answer: "Michael Bond"},
+      {answer: "Mary Tourtel"}
     ],
     correctAnswer: "A.A. Milne",
   },
   {
     question: "How many times has the TV show 'Family Guy' been cancelled?",
     answers: [
-      {answer: "0", correct: false},
-      {answer: "2", correct: true},
-      {answer: "1", correct: false},
-      {answer: "3", correct: false}
+      {answer: "0"},
+      {answer: "2"},
+      {answer: "1"},
+      {answer: "3"}
     ],
     correctAnswer: "2",
   },
   {
     question: "Who was supposed to play the T-1000 in 'Terminator 2; Judgement Day' before Robert Patrick took up the role?",
     answers: [
-      {answer: "Bill Murray", correct: false}, 
-      {answer: "Carl Weathers", correct: false},
-      {answer: "Billy Idol", correct: true},
-      {answer: "Jean Claude Van Damme", correct: false}
+      {answer: "Bill Murray"}, 
+      {answer: "Carl Weathers"},
+      {answer: "Billy Idol"},
+      {answer: "Jean Claude Van Damme"}
     ],
     correctAnswer: "Billy Idol",
+  },
+  {
+    question: "What is Indiana Jones first name?",
+    answers: [
+      {answer: "Henry"}, 
+      {answer: "winston"},
+      {answer: "Harold"},
+      {answer: "Hendrick"}
+    ],
+    correctAnswer: "Henry",
+  },
+  {
+    question: "What does 'SAS' stand for?",
+    answers: [
+      {answer: "Sandels and Shoes"}, 
+      {answer: "Sea and Sand"},
+      {answer: "Special Air Service"},
+      {answer: "Samba and Salsa"}
+    ],
+    correctAnswer: "Special Air Service",
+  },
+  {
+    question: "Where was the 2008 Olympic games held?",
+    answers: [
+      {answer: "Athens"}, 
+      {answer: "Cape Town"},
+      {answer: "London"},
+      {answer: "Beijing"}
+    ],
+    correctAnswer: "Beijing",
+  },
+  {
+    question: "Who starred alongside Will Ferrel as his brother 'Dale' in the film 'Step Brothers'?",
+    answers: [
+      {answer: "Adam Sandler"}, 
+      {answer: "Vince Vaughan"},
+      {answer: "John C. Reilly"},
+      {answer: "Owen Wilson"}
+    ],
+    correctAnswer: "John C. Reilly",
+  },
+  {
+    question: "'Why Do Birds Suddenly Appear' is a song performed by which band?",
+    answers: [
+      {answer: "Carpenters"}, 
+      {answer: "Brick Layers"},
+      {answer: "Plumbers"},
+      {answer: "Electricians"}
+    ],
+    correctAnswer: "Carpenters",
+  },
+  {
+    question: "Airsoft is a sport that originated in which country?",
+    answers: [
+      {answer: "America"}, 
+      {answer: "China"},
+      {answer: "Japan"},
+      {answer: "United kingdom"}
+    ],
+    correctAnswer: "Japan",
+  },
+  {
+    question: "The Riddler is a super villain who can be found in which comic book series?",
+    answers: [
+      {answer: "Spiderman"}, 
+      {answer: "The Walking Dead"},
+      {answer: "Kick Ass"},
+      {answer: "Batman"}
+    ],
+    correctAnswer: "Batman",
+  },
+  {
+    question: "Where was the comedy series 'Bottom' which starred Rik Mayall and Ade Edmondson?",
+    answers: [
+      {answer: "Hammersmith"}, 
+      {answer: "Harlow"},
+      {answer: "Hounslow"},
+      {answer: "Hampsted"}
+    ],
+    correctAnswer: "Hammersmith",
   },
 ]
 
