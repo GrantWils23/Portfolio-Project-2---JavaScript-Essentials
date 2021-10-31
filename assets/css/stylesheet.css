@@ -425,12 +425,10 @@ header button:hover {
     
     .start-game {
         margin: 200px auto;
-        margin-left: 5px;
-        margin-right:  5px;
         padding: 10px 10px;
         font-size: 1.6em;
         font-weight: 700;
-        width: 85%;;
+        width: 85%;
     }
 
     .question-counter {
@@ -452,3 +450,4 @@ header button:hover {
         font-size: 1.0em;
     }
 }
+

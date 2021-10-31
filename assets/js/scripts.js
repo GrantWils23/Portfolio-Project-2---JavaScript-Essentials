@@ -372,7 +372,7 @@ var quizQuestions = [
     correctAnswer: "Batman",
   },
   {
-    question: "Where was the comedy series 'Bottom' which starred Rik Mayall and Ade Edmondson?",
+    question: "Where was the comedy series 'Bottom' which starred Rik Mayall and Ade Edmondson set?",
     answers: [
       {answer: "Hammersmith"}, 
       {answer: "Harlow"},
@@ -390,11 +390,6 @@ var quizQuestions = [
 
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
-
-// var selectedValue;
-// let mutableList = quizQuestions;
-// let randomQuestions = [];
-// var question;
 
 let correctAnswerScore = 0;
 let incorrectAnswerScore = 0;
@@ -457,10 +452,12 @@ function answerSelected(event) {
   console.log(selectedValue);
 }
 
+// SELECTED ANSWER IS HIGHLIGHTED
 function answerHighlighted(event) {
  this.style.backgroundColor = "teal";
 }
 
+// RESET ALL THE BACKGROUND BUTTONS COLOR
 function resetBackgroundColor(event) {
   let buttons = document.getElementsByClassName("btn");
   for (let i = 0; i < buttons.length; i++) {
@@ -468,9 +465,10 @@ function resetBackgroundColor(event) {
   }
 }
 
+// EVENT LISTENERS TO THE SELECTED ANSWERS ON ONCLICKS
 let buttons = document.getElementsByClassName("btn");
 for (let i = 0; i < buttons.length; i++) {
-  let button = buttons[i].addEventListener("click", resetBackgroundColor);
+  let button = buttons[i].addEventListener("click", resetBackgroundColor); // call the reset first so on every change of selected answer resets before the rest of the code runs
   button = buttons[i].addEventListener("click", answerHighlighted);
   button = buttons[i].addEventListener("click", answerSelected);
 };
@@ -478,6 +476,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// CHECK ANSWER
 function checkAnswer(event) {
   let buttons = document.getElementsByClassName("btn");
   if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
@@ -489,7 +488,7 @@ function checkAnswer(event) {
   } else if (selectedValue !== question.correctAnswer) {
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i].textContent === selectedValue) {
-        buttons[i].style.backgroundColor = "red";
+        buttons[i].style.backgroundColor = "crimson";
       } else if (buttons[i].textContent === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
         buttons[i].style.backgroundColor = "green";
       }
@@ -503,7 +502,7 @@ function checkAnswer(event) {
 function countScore(event) {
   if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     correctAnswerScore += 1;
-  } else if (selectedValue !== shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
+  } else {
     incorrectAnswerScore += 1;
   }
 }
@@ -524,7 +523,6 @@ function nextQuestionButtonDisplay(event) {
 // SUBMIT ANSWER - WITH BOOLEAN LOGIC PREVENTING BUG OF NO SELECT VALUE PASSING TRUE //
 function SubmitAnswer(event) {
   if (selectedValue == null) {
-    // submitAnsBtn.disabled = true;
     return alert("Please select an answer")
   } else if (selectedValue != null) {
     checkAnswer();
@@ -535,6 +533,7 @@ function SubmitAnswer(event) {
   }
 }
 
+submitAnsBtn.addEventListener("click", SubmitAnswer);
 
 // CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE; //
 function returnResults(event) {
@@ -563,13 +562,10 @@ function returnResults(event) {
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-submitAnsBtn.addEventListener("click", SubmitAnswer);
-
 // DISPLAY NEXT QUESTION //
 function displayNextQuestion(event) {
   document.getElementById("next-btn").classList.add("hide");
   document.getElementById("submit-btn").classList.remove("hide");
-  // question = randomQuestions.pop();
   displayQuestion(question)
 }
 
@@ -577,15 +573,14 @@ nextQuestBtn.addEventListener("click", displayNextQuestion);
 nextQuestBtn.addEventListener("click", resetBackgroundColor);
 nextQuestBtn.addEventListener("click", returnResults);
 
-  // RESET VALUES //
-  function resetGameValues(event) {
-    currentQuestionNumberIndex = 1;
-    correctAnswerScore = 0;
-    incorrectAnswerScore = 0;
-    document.getElementById("submit-btn").classList.remove("hide"); // up to here to clear and hide elements in the box
-    document.getElementById("result-box").classList.add("hide");
-
-  }
+// RESET VALUES //
+function resetGameValues(event) {
+  currentQuestionNumberIndex = 1;
+  correctAnswerScore = 0;
+  incorrectAnswerScore = 0;
+  document.getElementById("submit-btn").classList.remove("hide"); // up to here to clear and hide elements in the box
+  document.getElementById("result-box").classList.add("hide");
+}
 
 // START NEW GAME //
  let startNewGameBtn = document.getElementById("start-new-game-btn");
