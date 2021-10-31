@@ -60,7 +60,7 @@
 </ul>
 
 <h2>Features left to implement</h2>
-<p>Features that I would like to include where there more time is...(QUIZ) more interactivity... more questions... maybe different catagories.<br>(RPS)... different game styles and versions... maybe base something on the three original starting pokemon... Charmander, Squirtle, and Bulbasaur.</p>
+<p>Features that I would like to include where there more time is in this game would be a timer on each question and their would be a bar that moves down from right to left for the given amount of time to answer the question. If would be interesting to have different catagories and have also large sample size of questions which would be accessible through a database rather than questions being integral to the script file to make the coding easier and seperate the data from the programming.</p>
 <br><br>
 
 <h2>Testing</h2>
@@ -69,7 +69,7 @@
         I tested playing this game on different website browsers such as Firefox, Chrome, Safari and Samsung Internet.
     </li>
     <li>
-        I can confirm that the results are fair and correct.
+        I can confirm that the results are correct and it accurately counts the user's score to give them their total.
     </li>
     <li>
         I confirmed that the text displayed on the screen is readable and easy to understand even when the screen size changes.
