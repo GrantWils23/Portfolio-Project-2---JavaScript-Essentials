@@ -1,12 +1,12 @@
 <h1>Portfolio_Project_2 --- JavaScript_Essentials</h1>
 
-![image](https://user-images.githubusercontent.com/72948843/139583320-9a4176cc-546e-4bda-84bf-84f35dcd1b2a.png)
-
 <br><br>
 <a href="https://grantwils23.github.io/Portfolio-Project-2---JavaScript-Essentials/">CLICK HERE TO GO TO THE SITE</a>
 
 <br><br>
-![image goes here](assets/images/filename.jpg)
+
+![image](https://user-images.githubusercontent.com/72948843/139583320-9a4176cc-546e-4bda-84bf-84f35dcd1b2a.png)
+
 <br><br>
 <h1>Quiz Game!</h1>
 <p>Yes I know what you are thinking, a very original title. This Quiz game is designed to test your knowledge on a whole wide range of topics. Each question is designed to be fun and interesting to the user as well as help the user learn new random bits of facts that they can tell their friends. This game is designed for all age groups in mind to have fun and learn if you don't know the answer you will learn the correct one too. </p>
@@ -101,13 +101,18 @@
 <ul>
     <li>HTML</li>
     <ul>
-        <li>I passed my code through the official W3C HTML validator and it passed with no errors</li>
+        <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/w3c-html-validator-results-for-quiz-game.pdf" target="_blank">Results here</a></li>
     </ul>
     </li>
     <li>CSS</li>
     <ul>
-        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors</li>
+        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/w3c%20-css%20-validator-results-for-quiz-game.pdf" target="_blank"> Results here</a></li>
     </ul>
+        <li>LightHouse</li>
+    <ul>
+        <li>I passed my code through the web developers tool lighthouse to see its performance and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/lighthouse-report-for-javascript-quizgame.pdf" target="_blank">Results here</a></li>
+    </ul>
+    </li>
 </ul>
 
 <br>
