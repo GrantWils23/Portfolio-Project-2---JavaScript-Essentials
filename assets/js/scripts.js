@@ -421,6 +421,10 @@ function setNextQuestion() {
 // KEEP TRACK OF QUESTION NUMBER //
 function questionTracker(event) {
   currentQuestionIndexNumber +=1;
+  let nextQuestBtn = document.getElementById("next-btn");
+  if (currentQuestionIndexNumber == 10) {
+    nextQuestBtn.innerHTML = "Show Results";
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -580,6 +584,7 @@ function resetGameValues(event) {
   incorrectAnswerScore = 0;
   document.getElementById("submit-btn").classList.remove("hide"); // up to here to clear and hide elements in the box
   document.getElementById("result-box").classList.add("hide");
+  document.getElementById("next-btn").innerHTML = "Next Question"; // reset the next button display for the rerunning of the game
 }
 
 // START NEW GAME //
