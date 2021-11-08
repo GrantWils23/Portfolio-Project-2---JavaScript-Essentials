@@ -1,5 +1,3 @@
-
-
 // GAME INSTRUCTIONS HELP MODAL // 
 
 // Get the modal
@@ -27,7 +25,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
 
 // QUIZ QUESTIONS ARRAY
 var quizQuestions = [
@@ -385,9 +382,6 @@ var quizQuestions = [
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
 
@@ -411,14 +405,21 @@ function startGame(event) {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
+// DISPLAY NEXT QUESTION //
+function displayNextQuestion(event) {
+  document.getElementById("next-btn").classList.add("hide");
+  document.getElementById("submit-btn").classList.remove("hide");
+  displayQuestion(question)
+}
+
+//SET NEXT QUESTION - calls function above and pulls the question out from the shuffled questions list from the index of what question the game is on //
 function setNextQuestion() {
   displayNextQuestion(shuffledQuestions[currentQuestionIndexNumber])
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// KEEP TRACK OF QUESTION NUMBER //
+// KEEP TRACK OF QUESTION NUMBER - when it reaches ten, the inner text prompts show results indicating the end of the 10 questions in the game played //
 function questionTracker(event) {
   currentQuestionIndexNumber +=1;
   let nextQuestBtn = document.getElementById("next-btn");
@@ -449,19 +450,18 @@ function displayQuestion(question) {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// CLICK AND TOGGLE THE ANSWER BUTTONS
+// CLICK AND TOGGLE THE ANSWER BUTTONS //
 function answerSelected(event) {
   selectedValue = null;
   selectedValue = this.innerHTML;
-  console.log(selectedValue);
 }
 
-// SELECTED ANSWER IS HIGHLIGHTED
+// SELECTED ANSWER IS HIGHLIGHTED //
 function answerHighlighted(event) {
  this.style.backgroundColor = "teal";
 }
 
-// RESET ALL THE BACKGROUND BUTTONS COLOR
+// RESET ALL THE BACKGROUND BUTTONS COLOR //
 function resetBackgroundColor(event) {
   let buttons = document.getElementsByClassName("btn");
   for (let i = 0; i < buttons.length; i++) {
@@ -469,7 +469,7 @@ function resetBackgroundColor(event) {
   }
 }
 
-// EVENT LISTENERS TO THE SELECTED ANSWERS ON ONCLICKS
+// EVENT LISTENERS TO THE SELECTED ANSWERS ON ONCLICKS //
 let buttons = document.getElementsByClassName("btn");
 for (let i = 0; i < buttons.length; i++) {
   let button = buttons[i].addEventListener("click", resetBackgroundColor); // call the reset first so on every change of selected answer resets before the rest of the code runs
@@ -480,7 +480,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// CHECK ANSWER
+// CHECK ANSWER //
 function checkAnswer(event) {
   let buttons = document.getElementsByClassName("btn");
   if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
@@ -502,7 +502,7 @@ function checkAnswer(event) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-// SCORE COUNTER 
+// SCORE COUNTER //
 function countScore(event) {
   if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     correctAnswerScore += 1;
@@ -513,6 +513,7 @@ function countScore(event) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
+// creeate variables of the submitAns and nextQuest btn 
 let submitAnsBtn = document.getElementById("submit-btn");
 let nextQuestBtn = document.getElementById("next-btn");
 
@@ -539,7 +540,7 @@ function SubmitAnswer(event) {
 
 submitAnsBtn.addEventListener("click", SubmitAnswer);
 
-// CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE; //
+// CHECK WHEN REACHED 10 QUESIIONS THAT WILL END GAME AND WILL RETURN THE SCORE //
 function returnResults(event) {
   let totalScore = correctAnswerScore + incorrectAnswerScore;
   if (totalScore === 10) {
@@ -550,8 +551,10 @@ function returnResults(event) {
     document.getElementById("result-box").classList.remove("hide");
   }
 
+// Create variable of userScore
  let userScore = document.getElementById("user-score");
- userScore.innerHTML = correctAnswerScore; // Display user score
+ userScore.innerHTML = correctAnswerScore; // Display user score on the page
+
  let personalMessage = document.getElementById("personal-message"); // code to display message based on score performance
   if (correctAnswerScore < 3) {
     personalMessage.innerHTML = "Unlucky there, better luck next time!";
@@ -566,13 +569,7 @@ function returnResults(event) {
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-// DISPLAY NEXT QUESTION //
-function displayNextQuestion(event) {
-  document.getElementById("next-btn").classList.add("hide");
-  document.getElementById("submit-btn").classList.remove("hide");
-  displayQuestion(question)
-}
-
+// DISPLAY NEXT QUESTION - after submitted answer, prompt the next question //
 nextQuestBtn.addEventListener("click", displayNextQuestion);
 nextQuestBtn.addEventListener("click", resetBackgroundColor);
 nextQuestBtn.addEventListener("click", returnResults);

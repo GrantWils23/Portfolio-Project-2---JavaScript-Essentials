@@ -175,6 +175,7 @@ header button:hover {
     outline: 2px solid darkolivegreen;
 }
 
+/* Start Game Button */
 .start-game {
     display: flex;
     justify-content: center;
@@ -223,7 +224,6 @@ header button:hover {
     border-style: solid;
     border-color: rgb(71, 112, 112);
     border-width: 3px;
-
 }
 
 #person-message {
@@ -244,10 +244,7 @@ header button:hover {
     border-width: 2px;
     border-color: darkolivegreen;
     cursor: pointer;
- /* edit */
 }
-
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Change screen size from larger to Medium size devices from 580px down" */
 @media screen and (max-width: 580px) {
@@ -402,7 +399,6 @@ header button:hover {
     
     .btn {
         font-size: 0.9em;
-        /* height: 50px; */
     }
 
     #start-new-game-btn {

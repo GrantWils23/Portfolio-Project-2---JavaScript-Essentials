@@ -9,7 +9,10 @@
 
 <br><br>
 <h1>Quiz Game!</h1>
-<p>Yes I know what you are thinking, a very original title. This Quiz game is designed to test your knowledge on a whole wide range of topics. Each question is designed to be fun and interesting to the user as well as help the user learn new random bits of facts that they can tell their friends. This game is designed for all age groups in mind to have fun and learn if you don't know the answer you will learn the correct one too. </p>
+<p>Yes I know what you are thinking, a very original title. This Quiz game is designed to test your knowledge on a whole wide range of topics. Each question is designed to be fun and interesting to the user as well as help the user learn new random bits of facts that they can tell their friends. This game is designed for all age groups in mind to have fun and learn if you don't know the answer you will learn the correct one too. Below you can see the wireframe designs for how the game design started out from and how it would look like on a mobile device</p>
+<img src="https://user-images.githubusercontent.com/72948843/140789265-fceacf57-b045-4c05-b42a-4633662b1b2d.png">
+<img src="https://user-images.githubusercontent.com/72948843/140790422-6cce8575-d2a6-4b00-a596-443e40f9757a.png">
+
 
 <h1>Features</h1>
 <hr>
@@ -34,7 +37,6 @@
             <li>The submit answer button will be clear and easy to read as the rest of the content on the page and will adopt the same stylings of the start button as main function buttons.</li>
             <li>The onclick event on the submit button will return the user with the correct answer, if the users answer is correct, it will return green color as where an incorrect answer will return red and also display the correct answer on green.</li>
             <li>Once the user has had time to read through the answer, they are then prompted to use the next question button that is forced so they can can continue the game till all 10 questions from the game are completed.</li>
-            <img src="https://user-images.githubusercontent.com/72948843/139581080-a047d7a7-1a59-4937-8291-5c244f4c0faf.png">
             <img src="https://user-images.githubusercontent.com/72948843/139583398-f2010d8f-96a3-491a-b1a3-3ba7896f5e4c.png">
             <img src="https://user-images.githubusercontent.com/72948843/139583649-860a6edb-f335-45a6-a73d-e18db9fc99ff.png">
             <img src="https://user-images.githubusercontent.com/72948843/139583696-98c351b6-9672-48f9-a62e-5cc31ca73a9e.png">
