@@ -403,8 +403,6 @@ function startGame(event) {
 
 };
 
-///////////////////////////////////////////////////////////////////////////////////////
-
 // DISPLAY NEXT QUESTION //
 function displayNextQuestion(event) {
   document.getElementById("next-btn").classList.add("hide");
@@ -417,8 +415,6 @@ function setNextQuestion() {
   displayNextQuestion(shuffledQuestions[currentQuestionIndexNumber])
 }
 
-///////////////////////////////////////////////////////////////////////////////////////
-
 // KEEP TRACK OF QUESTION NUMBER - when it reaches ten, the inner text prompts show results indicating the end of the 10 questions in the game played //
 function questionTracker(event) {
   currentQuestionIndexNumber +=1;
@@ -427,8 +423,6 @@ function questionTracker(event) {
     nextQuestBtn.innerHTML = "Show Results";
   }
 }
-
-/////////////////////////////////////////////////////////////////////////////////////
 
 // DISPLAY QUESTION //
 function displayQuestion(question) {
@@ -447,8 +441,6 @@ function displayQuestion(question) {
   let d = document.getElementsByClassName("btn")[3];
   d.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[3].answer;
 };
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // CLICK AND TOGGLE THE ANSWER BUTTONS //
 function answerSelected(event) {
@@ -477,9 +469,6 @@ for (let i = 0; i < buttons.length; i++) {
   button = buttons[i].addEventListener("click", answerSelected);
 };
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // CHECK ANSWER //
 function checkAnswer(event) {
   let buttons = document.getElementsByClassName("btn");
@@ -500,8 +489,6 @@ function checkAnswer(event) {
   }
 };
 
-////////////////////////////////////////////////////////////////////////////////////////////
-
 // SCORE COUNTER //
 function countScore(event) {
   if (selectedValue === shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
@@ -510,8 +497,6 @@ function countScore(event) {
     incorrectAnswerScore += 1;
   }
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////
 
 // creeate variables of the submitAns and nextQuest btn 
 let submitAnsBtn = document.getElementById("submit-btn");
@@ -522,8 +507,6 @@ function nextQuestionButtonDisplay(event) {
   document.getElementById("next-btn").classList.remove("hide");
   document.getElementById("submit-btn").classList.add("hide");
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////
 
 // SUBMIT ANSWER - WITH BOOLEAN LOGIC PREVENTING BUG OF NO SELECT VALUE PASSING TRUE //
 function SubmitAnswer(event) {
@@ -566,8 +549,6 @@ function returnResults(event) {
     personalMessage.innerHTML = "Wow 100%! We are in the presence of a genius. Congratulations!";
   }
 }
-
-////////////////////////////////////////////////////////////////////////////////////
 
 // DISPLAY NEXT QUESTION - after submitted answer, prompt the next question //
 nextQuestBtn.addEventListener("click", displayNextQuestion);
