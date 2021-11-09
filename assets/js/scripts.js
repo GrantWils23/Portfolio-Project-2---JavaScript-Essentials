@@ -31,7 +31,6 @@ window.onclick = function(event) {
 
 // QUIZ QUESTIONS ARRAY
 var quizQuestions = quizQuestionsDataBase;
-console.log(quizQuestions)
 
 const startButton = document.getElementById("start-game");
 startButton.addEventListener("click", startGame);
