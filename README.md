@@ -184,12 +184,12 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <ul>
     <li>HTML</li>
     <ul>
-        <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-html-validation-pass.jpg" target="_blank">Results here</a></li>
+        <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-hmtl-validation-pass.jpg" target="_blank">Results here</a></li>
     </ul>
     </li>
     <li>CSS</li>
     <ul>
-        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-twp-css-validation-pass.jpg" target="_blank"> Results here</a></li>
+        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-css-validation-pass.jpg" target="_blank"> Results here</a></li>
     </ul>
         <li>LightHouse</li>
     <ul>
