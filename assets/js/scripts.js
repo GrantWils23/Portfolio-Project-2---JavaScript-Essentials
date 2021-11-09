@@ -194,7 +194,7 @@ function returnResults(event) {
   } else if (correctAnswerScore < 6) {
     personalMessage.innerHTML = "Well done, you know some random stuff!";
   } else if (correctAnswerScore < 9) {
-    personalMessage.innerHTML = "Wow someone is showing off there skills!";
+    personalMessage.innerHTML = "Wow someone is showing off their skills!";
   } else if (correctAnswerScore == 10) {
     personalMessage.innerHTML = "Wow 100% We are in the presence of a genius. Congratulations!";
   }
