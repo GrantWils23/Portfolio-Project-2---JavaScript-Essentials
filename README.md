@@ -25,13 +25,13 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
     * [Responsive Testing](<#responsive-testing>)
     * [Validation Testing](<#validation-testing>)
 * [**Technologies Used**](<#technologies-used>)
-* [**Deployment](<#deployment>)
+* [**Deployment**](<#deployment>)
     * [Deployment of the project](<#deployment-of-the-project>)
     * [Cloning of the project](<#cloning-of-the-project>)
-* [**Credit](<#credits>)
+* [**Credit**](<#credits>)
     * [Content](<#content>)
     * [media](<#media>)
-* [**Aknowledgements](<#aknowledgements>)
+* [**Acknowledgements**](<#acknowledgements>)
 
 
 
@@ -203,32 +203,25 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
     <ul>
         <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-hmtl-validation-pass.jpg" target="_blank">Results here</a></li>
     </ul>
-    </li>
     <li>CSS</li>
     <ul>
         <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-css-validation-pass.jpg" target="_blank"> Results here</a></li>
     </ul>
-        <li>LightHouse</li>
+    <li>LightHouse</li>
     <ul>
         <li>I passed my code through the web developers tool lighthouse to see its performance and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/lighthouse-checker-pass.jpg" target="_blank">Results here</a></li>
     </ul>
-    </li>
-        </ul>
-        <li>JShint</li>
+    <li>JShint</li>
     <ul>
         <li>I passed my code through the official javascript code checker and both the game_questions and script files passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/jshint-game-questions-validation-pass.jpg" target="_blank">game_questions.js results here</a> and <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/jshint-script-validation-pass.jpg" target="_blank">scripts.js results here</a></li>
     </ul>
-    </li>
 </ul>
 
 <br>
 
 [Back to Top](<#contents>)
 
-<br>
-
 ## Technologies Used
-<hr>
 
 <li><a href="https://balsamiq.com/wireframes/?gclid=Cj0KCQiAsqOMBhDFARIsAFBTN3fo8GEpN1QxbMnF33fwtpl5TBARoyLLLRF7XPtAPNGO-q-wKkZw_NYaApBoEALw_wcB" target="_blank">Balsamiq</a> - Used in the creating of the original wireframe designs.</li>
 <li><a href="https://github.com/" target="_blank">GitHub</a> - The site was used to edit and host the website.</li>
@@ -241,16 +234,12 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 [Back to Top](<#contents>)
 
-
-<br><br>
-
-
-## Deployment
-<hr>
 <br>
 
+## Deployment
+
 ### Deployment of the project
-<hr>
+
 <p> I deployed this page using GitHub pages. To deploy this project i used the following steps in GitHub:</p>
 <ol>
     <li>In the GitHub repository, go to the settings tab.</li>
@@ -290,10 +279,9 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <br>
 
 ## Credits
-<hr>
 
 ### Content
-<hr>
+
 <ul>
     <li>The code and logic I got for the modal box came from the <a href="https://www.w3schools.com/howto/howto_css_modals.asp" target="_blank">w3schools.com</a>, so a special thanks for the w3school for their free lessons and content which helped me understand how modal boxes are used.</li>
     <li>The Fonts used on this project are from <a href="https://fonts.google.com/" target="_blank">fonts.google.com</a>.</li>
@@ -306,7 +294,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <br>
 
 ### Media
-<hr>
+
 <ul>
     <li>The favicon question mark that is used for the tab page was open source and I aquired it from <a href="https://favicon.io/" target="_blank">favicon.io</a>.</li>
     <li>The question mark that is used in the content of the web page itself was source from <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>.</li>
@@ -319,8 +307,8 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 <br>
 
-## Aknowledgments
-<hr>
+## Acknowledgements
+
 <p>This project is my 2nd Portfolio Project for the Full Stack Software Developer (e-Commerce) Diploma course provided by the <a href="https://codeinstitute.net/" target="_blank">Code Institute</a>. Here I would like to thank Precious Ijege my Mentor for his help and support as well as people in the Code Institute community. Also a small and yet rather big shout out to <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> and <a href="https://www.w3schools.com/" target="_blank">w3schools</a> for their learning material and knowledge is really useful when stuck and need to come up with ideas.</p>
 
 
