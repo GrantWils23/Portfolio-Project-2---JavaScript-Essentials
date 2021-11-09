@@ -46,7 +46,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 [Back to Top](<#contents>)
 
 ## Site Structure
-<p>The Website consists of one interactive front end page. The shape of the page draws focus to the middle of the screen and is designed to engage the user. There are two sets of important JavaScript files in the project. The game_questions.js file and scripts.js file which need to run in order for the game to work correctly.</p>
+<p>The Website consists of one interactive front-end page. The shape of the page draws focus to the middle of the screen and is designed to engage the user. There are two sets of important JavaScript files in the project. The game_questions.js file and scripts.js file are required to run for the game to work correctly.</p>
 
 [Back to Top](<#contents>)
 
@@ -63,7 +63,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 [Back to Top](<#contents>)
 
 ## Color Scheme
-<p>The colour scheme choice was down to a combination of association of what colors work well to draw the users attention. The colors settled upon where black on the fonts and then in variations of green that blend in with vivid appeal. The styles and placing of the colours are important to the user experience. Using radiants centered to the center really pulls your eyes to the center of the game area. whilst in the background you have a subtle and very calming blend of colors from white to green. This really helps the reader read the title of the page and the help button underneath.</p>
+<p>The color scheme choice was down to a combination of associations of what colors work well to draw the user's attention. The colors settled upon were black on the fonts and then in variations of green that blend in with vivid appeal. The styles and placing of the colors are important to the user experience. Using radiants centered to the center pulls your eyes to the center of the game area. whilst in the background, you have a subtle and very calming blend of colors from white to green. This helps the reader read the title of the page and the help button underneath.</p>
 
 [Back to Top](<#contents>)
 
@@ -73,8 +73,8 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 ## Existing Features
 ### Header
 <ul>
-<li>The header is features at the top of the screen the an easily visible title to the website which sits on a contrasting background to make for easy reading for the user.</li>
-<li>The header clearly display the type of game and website this page is.</li>
+<li>The header features at the top of the screen an easily visible title to the website which sits on a contrasting background to make for easy reading for the user.</li>
+<li>The header displays the type of game and website this page is.</li>
 <li> The header also contains a modal box which within the box when clicked displays the instructions of the game and how the game works.</li>
 <br>
 <img src="https://user-images.githubusercontent.com/72948843/139582919-c85bbee4-a4ca-4d88-b0a4-05f088fd958f.png">
@@ -85,12 +85,12 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 [Back to Top](<#contents>)
 ### Game Area
 <ul>
-<li>The game area is where the interactive side of the website can be found. When you start a game by pressing the button, the game will start to run through a randomly selected bunch of questions which it will then be down to the user to pick an answer.</li>
+<li>The game area is where the interactive side of the website can be found. When you start a game by pressing the button, the game will start to run through a randomly selected bunch of questions which will then be down to the user to pick an answer.</li>
 <li>The game area answers will be displayed in reactive boxes which change sizes depending on content and screen size.</li>
-<li>The answer buttons will all be reactive to hovering over elements and to onclick events that will tell you when you have a selected an answer with a visual display of color as feedback to the user.</li>
-<li>The submit answer button will be clear and easy to read as the rest of the content on the page and will adopt the same stylings of the start button as main function buttons.</li>
-<li>The onclick event on the submit button will return the user with the correct answer, if the users answer is correct, it will return green color as where an incorrect answer will return red and also display the correct answer on green.</li>
-<li>Once the user has had time to read through the answer, they are then prompted to use the next question button that is forced so they can can continue the game till all 10 questions from the game are completed.</li>
+<li>The answer buttons will all be reactive to hovering over elements and to onclick events that will tell you when you have selected an answer with a visual display of color as feedback to the user.</li>
+<li>The submit answer button will be clear and easy to read as the rest of the content on the page and will adopt the same stylings of the start button as the main function buttons.</li>
+<li>The onclick event on the submit button will return the user with the correct answer, if the users' answer is correct, it will return green color as to where an incorrect answer will return red and also display the correct answer in green.</li>
+<li>Once the user has had time to read through the answer, they are then prompted to use the next question button that is forced so they can continue the game till all 10 questions from the game are completed.</li>
 <br>
 <img src="https://user-images.githubusercontent.com/72948843/139583398-f2010d8f-96a3-491a-b1a3-3ba7896f5e4c.png">
 <img src="https://user-images.githubusercontent.com/72948843/139583649-860a6edb-f335-45a6-a73d-e18db9fc99ff.png">
@@ -103,8 +103,8 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 ### Game Results
 <ul>
     <li>The game results are displayed once the 10 questions have been answered.</li>
-    <li>The results page returns a score to the user out of ten and leaves you with a person message based on your score performance. The higher the score the more positive message congratulates you on your success based on your results.</li>
-    <li>The backkground color is set to blue to make it easy to destinguish the conclusion of the game.</li>
+    <li>The results page returns a score to the user out of ten and leaves you with a personalized message based on your score performance. The higher the score the more positive message congratulates you on your success based on your results.</li>
+    <li>The background color is set to blue to make it easy to destinguish the conclusion of the game.</li>
     <li>Under your results and personal scored based message will appear a new button prompting the user to try their luck again at the game and try to out perform their last score.</li>
     <li>The bright green colors of the main control buttons are designed to draw the users attention to them and to carry on playing the game.</li>
     <br>
@@ -116,7 +116,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 ### Features left to implement
 
-<p>Features that I would like to include where there more time is in this game would be a timer on each question and their would be a bar that moves down from right to left for the given amount of time to answer the question. If would be interesting to have different catagories and have also large sample size of questions which would be accessible through a database rather than questions being integral to the script file to make the coding easier and seperate the data from the programming.</p>
+<p>Features that I would like to include where there more time is in this game would be a timer on each question and there would be a bar that moves down from right to left for the given amount of time to answer the question. It would be interesting to have different categories and have also a larger database of questions.</p>
 <br>
 
 [Back to Top](<#contents>)
@@ -127,7 +127,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <hr>
 <ul>
     <li>
-        I tested playing this game on different website browsers such as Firefox, Chrome, Safari and Samsung Internet.
+        I tested playing this game on different website browsers such as Firefox, Chrome, Safari, and Samsung Internet.
     </li>
     <li>
         I can confirm that the results are correct and it accurately counts the user's score to give them their total.
@@ -136,13 +136,13 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
         I confirmed that the text displayed on the screen is readable and easy to understand even when the screen size changes.
     </li>
     <li>
-        I can confirm that the colours and fonts are easy to read and accessible by passing them through lighthouse in DEVELOPER TOOLS!
+        I can confirm that the colors and fonts are easy to read and accessible by passing them through the lighthouse in DEVELOPER TOOLS!
     </li>
     <br>
     <img src="https://user-images.githubusercontent.com/72948843/139580754-840ef914-ad09-48aa-8053-1ebc85847455.png">
     <br>
     <li>
-        I can confirm that the website design is responsive, looks asthetically pleasing and functions correctly on all standard screen sizes using the developers dev toolbar.
+        I can confirm that the website design is responsive, looks aesthetically pleasing, and functions correctly on all standard screen sizes using the developers' dev toolbar.
     </li>
 </ul>
 
@@ -157,8 +157,8 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 ### Solved Bugs
 <hr>
 <ul>
-    <li>A style fault was highlighted during the LightHouse report. The backgroundColor found to clash with foregroundColor of the text from the incorrect answer which wasn't providing enough contrast.</li>
-    <li>The item was found in my JavaScript script file in the checkAnswer function where the original color was set to red to signal an incorrect answer.</li>
+    <li>A style fault was highlighted during the LightHouse report. The background color was found to clash with the foreground color of the text from the incorrect answer which wasn't providing enough contrast.</li>
+    <li>The item was found in my JavaScript script file in the check answer function where the original color was set to red to signal an incorrect answer.</li>
     <li>This styling issue was rectified by altering the color to a different shade of red. I changed the color from "Red" to "Crimson".</li>
     <hr>
     <li>Upon playing the game, on the 10th submission of results I neglected to notice the button still has the writing inside it which says "next question".</li>
