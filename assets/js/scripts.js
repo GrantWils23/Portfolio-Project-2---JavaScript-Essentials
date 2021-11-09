@@ -189,14 +189,16 @@ function returnResults(event) {
  userScore.innerHTML = correctAnswerScore; // Display user score on the page
 
  let personalMessage = document.getElementById("personal-message"); // code to display message based on score performance
-  if (correctAnswerScore < 3) {
-    personalMessage.innerHTML = "Unlucky there, better luck next time!";
+  if (correctAnswerScore == 0) {
+    personalMessage.innerHTML = "Yikes!, Unlucky there, better luck next time!";
+  } else if (correctAnswerScore < 3) {
+    personalMessage.innerHTML = "oh not too bad, keep going and try to beat this score!";
   } else if (correctAnswerScore < 6) {
     personalMessage.innerHTML = "Well done, you know some random stuff!";
   } else if (correctAnswerScore < 9) {
     personalMessage.innerHTML = "Wow someone is showing off there skills!";
   } else if (correctAnswerScore == 10) {
-    personalMessage.innerHTML = "Wow 100%! We are in the presence of a genius. Congratulations!";
+    personalMessage.innerHTML = "Wow 100% We are in the presence of a genius. Congratulations!";
   }
 }
 
