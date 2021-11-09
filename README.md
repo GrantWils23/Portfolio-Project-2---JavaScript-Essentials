@@ -184,16 +184,16 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <ul>
     <li>HTML</li>
     <ul>
-        <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/w3c-html-validator-results-for-quiz-game.pdf" target="_blank">Results here</a></li>
+        <li>I passed my code through the official W3C HTML validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-two-html-validation-pass.jpg" target="_blank">Results here</a></li>
     </ul>
     </li>
     <li>CSS</li>
     <ul>
-        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/w3c%20-css%20-validator-results-for-quiz-game.pdf" target="_blank"> Results here</a></li>
+        <li>I passed my code through the official jigsaw CSS validator and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/project-twp-css-validation-pass.jpg" target="_blank"> Results here</a></li>
     </ul>
         <li>LightHouse</li>
     <ul>
-        <li>I passed my code through the web developers tool lighthouse to see its performance and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/lighthouse-report-for-javascript-quizgame.pdf" target="_blank">Results here</a></li>
+        <li>I passed my code through the web developers tool lighthouse to see its performance and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/lighthouse-checker-pass.jpg" target="_blank">Results here</a></li>
     </ul>
     </li>
 </ul>
@@ -235,6 +235,9 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
     <li>On the GitHub pages tab, change the source from none to master or main(depending on what the user sees).</li>
     <li>Once selected, press save and then the page will generate a link for your new completed page.</li>
 </ol>
+
+![image](https://user-images.githubusercontent.com/72948843/140975012-22d6b451-1c91-4a16-924a-73046525f5a2.png)
+
 <p>The link to the page can be found here - <a href="https://grantwils23.github.io/Portfolio-Project-2---JavaScript-Essentials/">LINK HERE!!!!</a></p>
 
 <br>
@@ -254,6 +257,8 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
     <li>In the terminal, write <b>Git Clone</b> and then paste in the URL supplied via GitHub from step 2.</li>
     <li>Press enter and your new cloned repository will be created within the desired location.</li>
 </ol>
+
+![image](https://user-images.githubusercontent.com/72948843/140975333-d7caf4dc-5fb4-435d-b85a-c92ad5ec4367.png)
 
 <br>
 
@@ -290,7 +295,6 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 [Back to Top](<#contents>)
 
 <br>
-
 
 ## Aknowledgments
 <hr>
