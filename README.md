@@ -22,6 +22,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 * [**Testing**](<#testing>)
     * [Bugs](<#bugs>)
     * [Solved Bugs](<#solved-bugs>)
+    * [Responsive Testing](<#responsive-testing>)
     * [Validation Testing](<#validation-testing>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Deployment](<#deployment>)
@@ -64,6 +65,17 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 ## Color Scheme
 <p>The color scheme choice was down to a combination of associations of what colors work well to draw the user's attention. The colors settled upon were black on the fonts and then in variations of green that blend in with vivid appeal. The styles and placing of the colors are important to the user experience. Using radiants centered to the center pulls your eyes to the center of the game area. whilst in the background, you have a subtle and very calming blend of colors from white to green. This helps the reader read the title of the page and the help button underneath.</p>
+
+<li><span style="color:DarkOliveGreen;"><b>DarkOliveGreen</b></span> - #556B2F</li>
+<li><span style="color:Green;"><b>Green</b></span> - #008000</li>
+<li><span style="color:DarkSeaGreen;"><b>DarkSeaGreen</b></span> - #8FBC8F</li>
+<li><span style="color:LightGreen;"><b>LightGreen</b></span> - #90ee90</li>
+<li><span style="color:YellowGreen;"><b>YellowGreen</b></span> - #9ACD32</li>
+<li><span style="color:Yellow;"><b>Yellow</b></span> - #FFFF00</li>
+<li><span style="color:rgb(107, 179, 189)"><b>Background-color to results box</b></span> - rgb(107, 179, 189)</li>
+<li><span style="color:rgb(71, 112, 112)"><b>Border-color to results box</b></span> - rgb(71, 112, 112)</li>
+
+<br>
 
 [Back to Top](<#contents>)
 
@@ -123,8 +135,7 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 <br>
 
-## Testing
-<hr>
+# Testing
 <ul>
     <li>
         I tested playing this game on different website browsers such as Firefox, Chrome, Safari, and Samsung Internet.
@@ -150,12 +161,10 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 <br>
 
-### Bugs
-<hr>
-<br>
+## Bugs
 
 ### Solved Bugs
-<hr>
+
 <ul>
     <li>A style fault was highlighted during the LightHouse report. The background color was found to clash with the foreground color of the text from the incorrect answer which wasn't providing enough contrast.</li>
     <li>The item was found in my JavaScript script file in the check answer function where the original color was set to red to signal an incorrect answer.</li>
@@ -171,7 +180,6 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 <br>
 
 ### Unsolved Bugs
-<hr>
 
 <p>There are no unfixed bugs found on the project.</p>
 
@@ -179,7 +187,16 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
 
 [Back to Top](<#contents>)
 
-### Validation Testing
+## Responsive Testing
+
+<p>I checked the responsiveness of the page using <a href="https://developer.chrome.com/docs/devtools/" target="_blank">Chrome Developer Tools</a> and <a href="https://www.responsivedesignchecker.com/" target="_blank">Responsive Design Checker</a> and the results pass the checks across a full range of device sizes from monitors, tablets and mobile devices.</p>
+
+<br>
+
+[Back to Top](<#contents>)
+
+
+## Validation Testing
 <hr>
 <ul>
     <li>HTML</li>
@@ -194,6 +211,12 @@ To delve straight in to the quiz, please just click here to <a href="https://gra
         <li>LightHouse</li>
     <ul>
         <li>I passed my code through the web developers tool lighthouse to see its performance and it passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/lighthouse-checker-pass.jpg" target="_blank">Results here</a></li>
+    </ul>
+    </li>
+        </ul>
+        <li>JShint</li>
+    <ul>
+        <li>I passed my code through the official javascript code checker and both the game_questions and script files passed with no errors, <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/jshint-game-questions-validation-pass.jpg" target="_blank">game_questions.js results here</a> and <a href="https://github.com/GrantWils23/Portfolio-Project-2---JavaScript-Essentials/blob/main/test_results/jshint-script-validation-pass.jpg" target="_blank">scripts.js results here</a></li>
     </ul>
     </li>
 </ul>

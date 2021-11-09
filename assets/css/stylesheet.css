@@ -209,6 +209,13 @@ header button:hover {
     height: 400px;
 }
 
+/* up the screen dead space for devices from 780px of full height to larger devices and monitors */
+@media screen and (min-height: 780px) {
+    .dead-space {
+        height: 650px;
+    }
+}
+
 .hide {
     display: none;
 }

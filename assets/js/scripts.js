@@ -15,19 +15,19 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 // QUIZ QUESTIONS ARRAY
 var quizQuestions = quizQuestionsDataBase;
@@ -42,27 +42,26 @@ let shuffledQuestions, currentQuestionIndexNumber;
 
 // START GAME //
 function startGame(event) {
-  console.log("started")
+  console.log("started");
   startButton.classList.add("hide");
   document.getElementById("question").classList.remove("hide");
   shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
   currentQuestionIndexNumber = 0;
   document.getElementById("answer-buttons").classList.remove("hide");
-  setNextQuestion()
-  displayQuestion(question);
-
-};
+  setNextQuestion();
+  displayQuestion();
+}
 
 // DISPLAY NEXT QUESTION //
 function displayNextQuestion(event) {
   document.getElementById("next-btn").classList.add("hide");
   document.getElementById("submit-btn").classList.remove("hide");
-  displayQuestion(question)
+  displayQuestion();
 }
 
 //SET NEXT QUESTION - calls function above and pulls the question out from the shuffled questions list from the index of what question the game is on //
 function setNextQuestion() {
-  displayNextQuestion(shuffledQuestions[currentQuestionIndexNumber])
+  displayNextQuestion(shuffledQuestions[currentQuestionIndexNumber]);
 }
 
 // KEEP TRACK OF QUESTION NUMBER - when it reaches ten, the inner text prompts show results indicating the end of the 10 questions in the game played //
@@ -75,7 +74,7 @@ function questionTracker(event) {
 }
 
 // DISPLAY QUESTION //
-function displayQuestion(question) {
+function displayQuestion() {
   let theQ = document.getElementById("question"); // display question
   theQ.innerHTML = shuffledQuestions[currentQuestionIndexNumber].question;
  
@@ -90,7 +89,7 @@ function displayQuestion(question) {
   c.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[2].answer;
   let d = document.getElementsByClassName("btn")[3];
   d.innerHTML = shuffledQuestions[currentQuestionIndexNumber].answers[3].answer;
-};
+}
 
 // CLICK AND TOGGLE THE ANSWER BUTTONS //
 function answerSelected(event) {
@@ -116,7 +115,7 @@ for (let i = 0; i < buttons.length; i++) {
   let button = buttons[i].addEventListener("click", resetBackgroundColor); // call the reset first so on every change of selected answer resets before the rest of the code runs
   button = buttons[i].addEventListener("click", answerHighlighted);
   button = buttons[i].addEventListener("click", answerSelected);
-};
+}
 
 // CHECK ANSWER //
 function checkAnswer(event) {
@@ -127,7 +126,7 @@ function checkAnswer(event) {
         buttons[i].style.backgroundColor = "green";
       }
     }
-  } else if (selectedValue !== question.correctAnswer) {
+  } else if (selectedValue !== shuffledQuestions[currentQuestionIndexNumber].correctAnswer) {
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i].textContent === selectedValue) {
         buttons[i].style.backgroundColor = "crimson";
@@ -136,7 +135,7 @@ function checkAnswer(event) {
       }
     }
   }
-};
+}
 
 // SCORE COUNTER //
 function countScore(event) {
@@ -160,7 +159,7 @@ function nextQuestionButtonDisplay(event) {
 // SUBMIT ANSWER - WITH BOOLEAN LOGIC PREVENTING BUG OF NO SELECT VALUE PASSING TRUE //
 function SubmitAnswer(event) {
   if (selectedValue == null) {
-    return alert("Please select an answer")
+    return alert("Please select an answer");
   } else if (selectedValue != null) {
     checkAnswer();
     countScore();
