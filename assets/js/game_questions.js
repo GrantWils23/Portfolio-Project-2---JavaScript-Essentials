@@ -1,5 +1,5 @@
 // QUIZ QUESTIONS ARRAY
-var quizQuestions = [
+var quizQuestionsDataBase = [
     {
       question: "What is the Capital of Germany?",
       answers: [
@@ -351,3 +351,5 @@ var quizQuestions = [
       correctAnswer: "Hammersmith",
     },
   ]
+
+  export{quizQuestionsDataBase};
